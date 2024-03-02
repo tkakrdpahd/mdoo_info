@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', initializePage);
 function initializePage() {
     setupPageNavigation();
+    langButtonEventListener();
 }
 
 function setupPageNavigation() {
@@ -18,8 +19,10 @@ function setupPageNavigation() {
                     window.location.href = '../index.html';
                 } else {
                     const currentPage = window.location.pathname.split('/').pop();
-                    if (currentPage === 'index.html' || currentPage === '') {
+                    if (currentPage === 'index.html') {
                         window.location.href = './html/detailPage.html';
+                    } else {
+                        location.reload();
                     }
                     readAndWrite(id);
                 }
@@ -28,7 +31,27 @@ function setupPageNavigation() {
     });
 }
 
+// this is language button eventListener
+function langButtonEventListener() {
+    if (localStorage.getItem("language") == null) {
+        updateLanguageInfo("ko");
+    }
 
+    document.getElementById('korean').addEventListener('click', function () {
+        updateLanguageInfo("ko");
+    });
+
+    document.getElementById('english').addEventListener('click', function () {
+        updateLanguageInfo("en");
+    });
+}
+
+function updateLanguageInfo(language) {
+    localStorage.setItem("language", language);
+    location.reload();
+}
+
+// load contents;
 function readAndWrite(pageId){
     fetch("../json/" + pageId + ".json")
     .then(response => response.json())
