@@ -56,7 +56,8 @@ function readAndWrite(pageId){
     fetch("../json/" + pageId + ".json")
     .then(response => response.json())
         .then(json => {
-
+            const language = localStorage.getItem("language");
+        
     })
     .catch(error => {
         console.error('Error fetching JSON:', error);

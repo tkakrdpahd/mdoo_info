@@ -9,6 +9,7 @@
 @media screen and (min-width: 1080px) {
     body{
         font-family: 'Noto Sans KR', sans-serif;
+        background-color: #000;
         color: white;
         a{
             text-decoration: none;
@@ -26,11 +27,11 @@
             font-size: 1.5rem;
             font-weight: 500;
 
-            color: black;
+            color: #fff;
         }
         p{
             width: 7.5vw;
-            border-bottom: black 0.125vw solid;
+            border-bottom: #fff 0.125vw solid;
         }
         img{
             width: 1vw;
@@ -53,7 +54,7 @@
         position: fixed;
         display: block;
         text-align: right;
-        background-color: rgb(125, 125, 125);
+        background-color: rgb(85, 85, 85);
 
         h1, h2, h3{
             @include reset;
@@ -73,7 +74,7 @@
         }
         li {
             font-size: 0.85rem;
-            
+
             margin: 0.25vw;
             font-size: 0.95rem;
             font-weight: 300;
@@ -131,7 +132,7 @@
         position: absolute;
         bottom: 0;
         margin: 1vw;
-        color: black;
+        color: fff;
 
         font-size: 0.85rem;
     }
