@@ -1,147 +1,31 @@
 {
     "ko": [
         {
+          "name": "두민석",
+          "role": "테크니컬 아트 / 시스템 엔지니어",
+          "phone": "+82 010-8709-9490",
+          "email": "albert052609@gmail.com",
+          "portfolio": "mdoo_pri.artstation.com",
+          "github": "github.com/tkakrdpahd"
         }
     ],
     "en":[
         {
-            "personalInfo": {
-              "name": "Minseok Doo",
-              "role": "Technical Art",
-              "contact": {
-                "phone": "+1 941 321-6842",
-                "email": "albert052609@gmail.com",
-                "portfolio": "mdoo_pri.artstation.com",
-                "github": "github.com/tkakrdpahd"
-              }
-            },
-            "summary": "Details about Minseok's professional summary...",
-            "skills": {
-              "professional": {
-                "software": ["Adobe Photoshop CS3 - CC", "Maya", "ZBrush 2021 - 2023", "Substance Painter", "Unreal Engine 4"],
-                "programming": ["C", "C++"],
-                "operatingSystems": ["Windows", "Ubuntu", "Debian", "Rocky Linux 9", "RedHat 9"],
-                "networkManagement": ["TCP/IP engineering", "FTP", "ILS (Windows)", "Debian Linux"],
-                "gameEngine": ["Unreal Engine 4"]
-              },
-              "advanced": {
-                "software": ["Adobe Premier Pro CS6 - CC", "Adobe Audition", "Adobe InDesign", "Adobe Dreamweaver", "Adobe XD", "Figma", "Blender", "OBS Studio", "Procreate"],
-                "programming": ["Python", "Java", "JavaScript", "P5.JS", "Arduino", "Node.js"],
-                "dbSystems": ["MariaDB", "MySQL"],
-                "operatingSystems": ["Cent OS", "Rocky Linux", "Ubuntu"],
-                "gameEngine": ["Unity (22.3.17f1)"]
-              },
-              "entryLevel": {
-                "software": ["DaVinci Resolve", "Clip Studio"],
-                "programming": ["React", "PHP"],
-                "operatingSystems": ["Arch"]
-              }
-            },
-            "education": [
-              {
-                "institution": "Maryland Institute College of Art",
-                "location": "Baltimore, MD",
-                "degree": "BFA in Interactive Art, minor in game art",
-                "dates": "August 2023 – May 2025"
-              },
-              {
-                "institution": "Ringling College of Art and Design",
-                "location": "Sarasota, FL",
-                "status": "Withdrawn",
-                "fieldOfStudy": "Game Art / VR development",
-                "dates": "August 2021 – May 2023"
-              },
-              {
-                "institution": "Korea University",
-                "location": "Seoul, South Korea",
-                "program": "International Summer Campus",
-                "dates": "June - July 2022"
-              }
-            ],
-            "honorsAndScholarships": [
-              {
-                "title": "Dean's List",
-                "institution": "Maryland Institute College of Art",
-                "location": "Baltimore, MD",
-                "date": "Fall 2023"
-              },
-              {
-                "title": "Transfer Scholarship",
-                "institution": "Maryland Institute College of Art",
-                "location": "Baltimore, MD",
-                "period": "2023 – Current"
-              },
-              {
-                "title": "Pathway Scholarship",
-                "institution": "Ringling College of Art and Design",
-                "location": "Sarasota, FL",
-                "period": "2021-2023"
-              }
-            ],
-            "publications": [
-                {
-                    "author": "M. Doo",
-                    "title": "Unearthing the Essence of Video Games: An Analysis of Literary and Artistic Discourses",
-                    "journal": "Semiotica",
-                    "status": "With Editor",
-                    "volume": "TBD",
-                    "pages": "TBD",
-                    "article": "SEMI.2023.0187"
-                },
-                {
-                    "author": "M. Doo",
-                    "title": "The V-Tuber Wave: Origins, Divergence, and Convergence in Contemporary Media",
-                    "journal": "Convergence",
-                    "status": "Awaiting Reviewer Scores",
-                    "volume": "TBD",
-                    "pages": "TBD",
-                    "article": "CON-24-0021"
-                },
-                {
-                    "author": "M. Doo",
-                    "title": "Critical review on decentralization of gaming servers with P2P service",
-                    "conference": "2024 IEEE Gaming, Entertainment, and Media Conference (GEM)",
-                    "status": "Pending",
-                    "year": "2024",
-                    "volume": "33",
-                    "article": "1570994560"
-                },
-                {
-                    "author": "M. Doo",
-                    "title": "V-Tuber wave: Origins, divergence, and convergence in contemporary media",
-                    "conference": "Global Conference on Media, Communication, and Film (MCFCONF)",
-                    "year": "2024",
-                    "volume": "1",
-                    "issue": "1",
-                    "article": "1"
-                },
-                {
-                    "author": "M. Doo",
-                    "title": "Tactic of game design: The playability and gameness",
-                    "conference": "Korea Game Society 2023 Spring Conference",
-                    "year": "2023",
-                    "pages": "3-10"
-                }
-            ],
-            "experience": [
-              {
-                "year": "2024",
-                "role": "Technical Art Internship",
-                "company": "Perception Neuron Inc",
-                "details": "Details about the internship..."
-              },
-              {
-                "year": "2024",
-                "project": "The P2P Live-Streaming Module Study",
-                "conference": "IEEE TEMSCON 2024: Disruptive Technologies Trends",
-                "article": "Article 10",
-                "details": "• The paper discusses the impact of peer-to-peer (P2P) networking and blockchain technologies on the streaming industry, highlighted by Twitch Korea's closure in South Korea due to increased streaming fees. It introduces a P2P live-streaming module supporting Net Neutrality, employing P2P networks, DNS seeding, and advanced techniques to create a robust framework with 'Regional Pool', 'Layer Network', 'Domain Node', and 'Witness Node'.<br><br>The project addresses challenges like latency in P2P networks and DNS proxy protection for streamers. While it outlines the potential of P2P live streaming to increase data transactions without causing bottlenecks, it also acknowledges challenges in proving the sustainability of such systems, especially in scenarios involving extensive data transfers and multi-user proxy pools."
-              }
-            ],
-            "languages": {
-              "Korean": "Fluent (Native Speaker)",
-              "English": "Fluent (Second Language)"
-            }
+          "name": "Minseok Doo",
+          "role": "Technical Art / System Engineer",
+          "phone": "+1 941 321-6842",
+          "email": "albert052609@gmail.com",
+          "portfolio": "mdoo_pri.artstation.com",
+          "github": "github.com/tkakrdpahd"
+        },
+        {
+          "Summery": "Summery"
+        },
+        {
+          "Skiles": "Skiles",
+          "Professional Skills": "Professional Skills:",
+          "Design & Visualization": "- Design & Visualization: Adobe Photoshop (CS3 - CC), Maya, ZBrush (2021 - 2023), Substance Painter",
+          "Game Development": "Game Development: Unreal Engine 4"
         }
     ]
  }

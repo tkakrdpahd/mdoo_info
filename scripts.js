@@ -1,8 +1,9 @@
-// scripts.js
 document.addEventListener('DOMContentLoaded', initializePage);
+
 function initializePage() {
     setupPageNavigation();
     langButtonEventListener();
+    loadScript();
 }
 
 function setupPageNavigation() {
@@ -15,6 +16,8 @@ function setupPageNavigation() {
         if (element) {
             element.addEventListener('click', event => {
                 event.preventDefault();
+                localStorage.setItem("page", id);
+                
                 if (id === 'index') {
                     window.location.href = '../index.html';
                 } else {
@@ -24,42 +27,46 @@ function setupPageNavigation() {
                     } else {
                         location.reload();
                     }
-                    readAndWrite(id);
                 }
             });
         }
     });
 }
 
-// this is language button eventListener
+function loadScript(callback) {
+    const pageId = localStorage.getItem("page");
+    const scriptSrc = '../js/' + pageId + '.js';
+    const scripts = document.getElementsByTagName('script');
+
+    for (let script of scripts) {
+        if (script.getAttribute('src') === scriptSrc) {
+            return;
+        }
+    }
+
+    const newScript = document.createElement('script');
+    newScript.src = scriptSrc;
+
+    // callback readAndWrite();
+    newScript.onload = function() {
+        if (callback && typeof callback === 'function') {
+            callback();
+        }
+    };
+
+    document.body.appendChild(newScript);
+}
+
 function langButtonEventListener() {
     if (localStorage.getItem("language") == null) {
         updateLanguageInfo("ko");
     }
 
-    document.getElementById('korean').addEventListener('click', function () {
-        updateLanguageInfo("ko");
-    });
-
-    document.getElementById('english').addEventListener('click', function () {
-        updateLanguageInfo("en");
-    });
+    document.getElementById('korean').addEventListener('click', () => updateLanguageInfo("ko"));
+    document.getElementById('english').addEventListener('click', () => updateLanguageInfo("en"));
 }
 
 function updateLanguageInfo(language) {
     localStorage.setItem("language", language);
     location.reload();
-}
-
-// load contents;
-function readAndWrite(pageId){
-    fetch("../json/" + pageId + ".json")
-    .then(response => response.json())
-        .then(json => {
-            const language = localStorage.getItem("language");
-        
-    })
-    .catch(error => {
-        console.error('Error fetching JSON:', error);
-    });
 }
