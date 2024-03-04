@@ -52,7 +52,7 @@
         height: 100vw;
         padding: 1vw;
         position: fixed;
-        display: block; // need to make a toggle button default setting is block
+        visibility:visible ; // need to make a toggle button default setting is visible
         text-align: right;
         background-color: rgb(85, 85, 85);
 
@@ -73,6 +73,8 @@
             font-weight: 400;
         }
         li {
+            display: none;
+
             font-size: 0.85rem;
 
             margin: 0.25vw;

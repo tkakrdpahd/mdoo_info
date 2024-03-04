@@ -41,7 +41,7 @@
     height: 100vw;
     padding: 1vw;
     position: fixed;
-    display: block;
+    visibility: visible;
     text-align: right;
     background-color: rgb(85, 85, 85);
   }
@@ -63,6 +63,7 @@
     font-weight: 400;
   }
   header li {
+    display: none;
     font-size: 0.85rem;
     margin: 0.25vw;
     font-size: 0.9rem;
