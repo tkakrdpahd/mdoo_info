@@ -22,10 +22,10 @@ function setupPageNavigation() {
                     window.location.href = '../index.html';
                 } else {
                     const currentPage = window.location.pathname.split('/').pop();
-                    if (currentPage === 'index.html') {
-                        window.location.href = './html/detailPage.html';
-                    } else {
+                    if (currentPage === 'detailPage.html') {
                         location.reload();
+                    } else {
+                        window.location.href = './html/detailPage.html';
                     }
                 }
             });

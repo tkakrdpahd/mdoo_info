@@ -65,7 +65,7 @@
   header li {
     font-size: 0.85rem;
     margin: 0.25vw;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 300;
   }
   header img {
@@ -80,9 +80,6 @@
     list-style-type: none;
   }
   header .journalPublication {
-    padding-top: 2vw;
-  }
-  header ul {
     padding-top: 2vw;
   }
   .button_01 {
@@ -109,11 +106,14 @@
     font-size: 0.75rem;
     font-weight: 500;
   }
+  .mainContents .personalInfo {
+    text-align: center;
+  }
   footer {
     position: absolute;
     bottom: 0;
     margin: 1vw;
     color: fff;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
 }
