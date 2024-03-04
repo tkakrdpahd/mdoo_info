@@ -11,7 +11,6 @@ function readAndWrite() {
             for (let i = 0; i < contentsLength; i++) {
                 const currentContentKeys = Object.keys(contents[i]);
 
-                // 'div' 요소를 생성하여 각 섹션을 구분합니다.
                 const sectionElement = document.createElement('div');
                 const newClass = currentContentKeys[0];
 
@@ -21,9 +20,8 @@ function readAndWrite() {
                 for (let j = 0; j < currentContentKeys.length; j++) {
                     const key = currentContentKeys[j];
                     const value = contents[i][key];
-                    console.log(`${key}: ${value}`); // 키와 값 모두 출력
 
-                    if (Array.isArray(value) && value.length > 0) { // value가 배열이며, 하나 이상의 요소를 포함하는지 확인
+                    if (Array.isArray(value) && value.length > 0) {
                         const spanElement = document.createElement(value[0]);
 
                         for (let j = 1; j < value.length; j++) {
