@@ -7,7 +7,9 @@ function initializePage() {
 }
 
 function setupPageNavigation() {
-    const ids = ['index', 'profile', 'ArtDescriptions', 'DevDescriptions', 'contact'];
+    const ids = [
+        'index', 'profile', 'ArtDescriptions', 'DevDescriptions', 'contact'
+    ];
 
     ids.forEach(id => {
         const element = document.getElementById(id);
@@ -62,7 +64,6 @@ function loadScript(callback) {
 
 // This is language button logic
 function langButtonEventListener() {
-    // If langugage setting is null, setting to Korean
     if (localStorage.getItem("language") == null) {
         localStorage.setItem("language", "ko");
         location.reload();
