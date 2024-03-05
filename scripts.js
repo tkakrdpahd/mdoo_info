@@ -31,6 +31,9 @@ function setupPageNavigation() {
             });
         }
     });
+
+    // need to add change setting header li display setting none to block
+    
 }
 
 function loadScript(callback) {
