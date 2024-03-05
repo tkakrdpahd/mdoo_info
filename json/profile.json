@@ -1,12 +1,13 @@
 {
   "ko": [
     {
-      "personalInfo": [],
-      "name": ["h1", "두민석<br>"],
-      "role": ["h2", "전체이력<br>"],
-      "contactInfo": ["h4", "+82 010-8709-9490 | albert052609@gmail.com<br>"],
-      "portfolio": ["h4", "mdoo_pri.artstation.com | github.com/tkakrdpahd<br>"],
-      "line": ["p", ""]
+      "personalInfo": {
+        "name": "두민석<br>",
+        "role": "전체이력<br>",
+        "contactInfo": ["+82 010-8709-9490", "albert052609@gmail.com"],
+        "portfolio": ["mdoo_pri.artstation.com", "github.com/tkakrdpahd"],
+        "line": "line"
+      }
     },
     {
       "Summery": [],
