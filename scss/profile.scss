@@ -1,0 +1,66 @@
+// This is profile page setting
+@mixin reset{
+    margin: 0;
+    padding: 0;
+}
+@mixin line{
+    margin: auto;
+    padding-top: 1vw;
+    width: 60vw;
+    border-bottom: #fff 0.1vw solid;
+}
+// this is article setting
+.mainContents{
+    // this is career page setting
+    margin-right: 20vw;
+
+    // this is personal information setting
+    .personalInfo{
+        text-align: center;
+
+        h1, h2, h3, h4 {
+            @include reset;
+            padding: 0.25vw;
+        }
+        h1 {
+            margin-top: 4vw;
+
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        h2 {
+            margin-bottom: 1.5vw;
+
+            font-size: 1.25rem;
+            font-weight:300;
+        }
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+        h4 {
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+        p {
+            @include line;
+        }
+    }
+        .Summery {
+        text-align: center;
+        h1{
+            margin-bottom: 1.5vw;
+            font-size: 1.5rem;
+            font-weight:500;
+        }
+        h2 {
+            width: 59vw;
+            margin: auto;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        p {
+            @include line
+        }
+    }
+}

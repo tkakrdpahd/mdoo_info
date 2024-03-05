@@ -1,0 +1,55 @@
+.mainContents {
+  margin-right: 20vw;
+}
+.mainContents .personalInfo {
+  text-align: center;
+}
+.mainContents .personalInfo h1, .mainContents .personalInfo h2, .mainContents .personalInfo h3, .mainContents .personalInfo h4 {
+  margin: 0;
+  padding: 0;
+  padding: 0.25vw;
+}
+.mainContents .personalInfo h1 {
+  margin-top: 4vw;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.mainContents .personalInfo h2 {
+  margin-bottom: 1.5vw;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.mainContents .personalInfo h3 {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.mainContents .personalInfo h4 {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.mainContents .personalInfo p {
+  margin: auto;
+  padding-top: 1vw;
+  width: 60vw;
+  border-bottom: #fff 0.1vw solid;
+}
+.mainContents .Summery {
+  text-align: center;
+}
+.mainContents .Summery h1 {
+  margin-bottom: 1.5vw;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.mainContents .Summery h2 {
+  width: 59vw;
+  margin: auto;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.mainContents .Summery p {
+  margin: auto;
+  padding-top: 1vw;
+  width: 60vw;
+  border-bottom: #fff 0.1vw solid;
+}

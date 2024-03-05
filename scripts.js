@@ -7,9 +7,7 @@ function initializePage() {
 }
 
 function setupPageNavigation() {
-    const ids = [
-        'index', 'profile', 'ArtDescriptions', 'DevDescriptions', 'contact'
-    ];
+    const ids = ['index', 'profile', 'ArtDescriptions', 'DevDescriptions', 'contact'];
 
     ids.forEach(id => {
         const element = document.getElementById(id);
@@ -35,7 +33,9 @@ function setupPageNavigation() {
     // need to add change setting header li display setting none to block
     
 }
+// Need to add css for each page call
 
+// This is loading JavaScript for each page call
 function loadScript(callback) {
     const pageId = localStorage.getItem("page");
     const scriptSrc = '../js/' + pageId + '.js';
@@ -60,16 +60,21 @@ function loadScript(callback) {
     document.body.appendChild(newScript);
 }
 
+// This is language button logic
 function langButtonEventListener() {
+    // If langugage setting is null, setting to Korean
     if (localStorage.getItem("language") == null) {
-        updateLanguageInfo("ko");
+        localStorage.setItem("language", "ko");
+        location.reload();
     }
 
-    document.getElementById('korean').addEventListener('click', () => updateLanguageInfo("ko"));
-    document.getElementById('english').addEventListener('click', () => updateLanguageInfo("en"));
-}
+    document.getElementById('korean').addEventListener('click', () => {
+        localStorage.setItem("language", "ko");
+        location.reload();
+    });
 
-function updateLanguageInfo(language) {
-    localStorage.setItem("language", language);
-    location.reload();
+    document.getElementById('english').addEventListener('click', () => {
+        localStorage.setItem("language", "en");
+        location.reload();
+    });
 }
