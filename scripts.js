@@ -15,7 +15,7 @@ function setupPageNavigation() {
         if (element) {
             element.addEventListener('click', event => {
                 event.preventDefault();
-                setCookie("page", id, 1); // 1일 동안 쿠키 유지
+                setCookie("page", id);
                 
                 if (id === 'index') {
                     window.location.href = '../index.html';
@@ -25,8 +25,7 @@ function setupPageNavigation() {
                         window.location.href = './html/detailPage.html';
                         location.reload();
                     } else {
-                        window.location.href = './html/detailPage.html';
-                        
+                        location.reload();
                     }
                 }
             });
@@ -36,6 +35,10 @@ function setupPageNavigation() {
 
 function loadScript(callback) {
     const pageId = getCookie("page");
+    if (pageId == null) {
+        setCookie("page", "index");
+    }
+
     const scriptSrc = '../js/' + pageId + '.js';
     const scripts = document.getElementsByTagName('script');
 
@@ -58,30 +61,25 @@ function loadScript(callback) {
 
 function langButtonEventListener() {
     if (!getCookie("language")) {
-        setCookie("language", "ko", 365); // 1년 동안 쿠키 유지
+        setCookie("language", "ko");
         location.reload();
     }
 
     document.getElementById('korean').addEventListener('click', () => {
-        setCookie("language", "ko", 365);
+        setCookie("language", "ko");
         location.reload();
     });
 
     document.getElementById('english').addEventListener('click', () => {
-        setCookie("language", "en", 365);
+        setCookie("language", "en");
         location.reload();
     });
 }
 
 // 쿠키 설정 함수
 function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; SameSite=None; Secure; path=/";
+
+    document.cookie = name + "=" + (value || "") + "; path=/";
 }
 
 // 쿠키 가져오기 함수
