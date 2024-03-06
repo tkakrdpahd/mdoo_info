@@ -44,6 +44,13 @@
             align-items: center;
             justify-content: center;
         }
+    }
+    .headerButton{
+        top: 0;
+        right: 0;
+        margin: 1vw;
+        position: fixed;
+        z-index: 1;
     }    
     header {
         top: 0;
