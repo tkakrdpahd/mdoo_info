@@ -16,12 +16,12 @@ fetch('/api/user-info').then(response => response.json()).then(data => {
 */
 
 function readAndWrite() {
-    const pageId = sessionStorage.getItem("page");
+  const pageId = getCookie("page");
 
     fetch("../json/" + pageId + ".json")
         .then(response => response.json())
         .then(json => {
-            const language = localStorage.getItem("language");
+            const language = getCookie("language")
             const contents = json[language];
             //onst contentsKeys = Object.keys(contents);
 

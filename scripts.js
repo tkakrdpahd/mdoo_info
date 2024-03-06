@@ -7,7 +7,6 @@ function initializePage() {
 }
 
 function setupPageNavigation() {
-    // This is loding other pages logic
     const ids = [
         'index', 'profile', 'ArtDescriptions', 'DevDescriptions', 'contact'
     ];
@@ -16,35 +15,27 @@ function setupPageNavigation() {
         if (element) {
             element.addEventListener('click', event => {
                 event.preventDefault();
-                sessionStorage.setItem("page", id);
+                setCookie("page", id, 1); // 1일 동안 쿠키 유지
                 
                 if (id === 'index') {
                     window.location.href = '../index.html';
                 } else {
                     const currentPage = window.location.pathname.split('/').pop();
-                    if (currentPage === 'detailPage.html') {
-                        loadScript();
+                    if (currentPage !== 'detailPage.html') {
+                        window.location.href = './html/detailPage.html';
+                        location.reload();
                     } else {
                         window.location.href = './html/detailPage.html';
+                        location.reload();
                     }
                 }
             });
         }
     });
-
-    // need to add change setting header li display setting none to block
-
-    // This is li tag display setting
-    const pageId = localStorage.getItem("page");
-    if (pageId == null){
-        sessionStorage.setItem("page", "index");
-    }
 }
-// Need to add css for each page call
 
-// This is loading JavaScript for each page call
 function loadScript(callback) {
-    const pageId = sessionStorage.getItem("page");
+    const pageId = getCookie("page");
     const scriptSrc = '../js/' + pageId + '.js';
     const scripts = document.getElementsByTagName('script');
 
@@ -56,8 +47,6 @@ function loadScript(callback) {
 
     const newScript = document.createElement('script');
     newScript.src = scriptSrc;
-
-    // callback readAndWrite();
     newScript.onload = function() {
         if (callback && typeof callback === 'function') {
             callback();
@@ -67,20 +56,42 @@ function loadScript(callback) {
     document.body.appendChild(newScript);
 }
 
-// This is language button logic
 function langButtonEventListener() {
-    if (localStorage.getItem("language") == null) {
-        localStorage.setItem("language", "ko");
+    if (!getCookie("language")) {
+        setCookie("language", "ko", 365); // 1년 동안 쿠키 유지
         readAndWrite();
     }
 
     document.getElementById('korean').addEventListener('click', () => {
-        localStorage.setItem("language", "ko");
+        setCookie("language", "ko", 365);
         readAndWrite();
     });
 
     document.getElementById('english').addEventListener('click', () => {
-        localStorage.setItem("language", "en");
+        setCookie("language", "en", 365);
         readAndWrite();
     });
+}
+
+// 쿠키 설정 함수
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// 쿠키 가져오기 함수
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
 }
