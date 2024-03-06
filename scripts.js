@@ -26,7 +26,7 @@ function setupPageNavigation() {
                         location.reload();
                     } else {
                         window.location.href = './html/detailPage.html';
-                        location.reload();
+                        
                     }
                 }
             });
@@ -59,17 +59,17 @@ function loadScript(callback) {
 function langButtonEventListener() {
     if (!getCookie("language")) {
         setCookie("language", "ko", 365); // 1년 동안 쿠키 유지
-        readAndWrite();
+        location.reload();
     }
 
     document.getElementById('korean').addEventListener('click', () => {
         setCookie("language", "ko", 365);
-        readAndWrite();
+        location.reload();
     });
 
     document.getElementById('english').addEventListener('click', () => {
         setCookie("language", "en", 365);
-        readAndWrite();
+        location.reload();
     });
 }
 
@@ -81,7 +81,7 @@ function setCookie(name, value, days) {
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         expires = "; expires=" + date.toUTCString();
     }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    document.cookie = name + "=" + (value || "") + expires + "; SameSite=None; Secure; path=/";
 }
 
 // 쿠키 가져오기 함수
