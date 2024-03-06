@@ -16,14 +16,16 @@ fetch('/api/user-info').then(response => response.json()).then(data => {
 */
 
 function readAndWrite() {
-    const pageId = localStorage.getItem("page");
+    const pageId = sessionStorage.getItem("page");
 
     fetch("../json/" + pageId + ".json")
         .then(response => response.json())
         .then(json => {
             const language = localStorage.getItem("language");
             const contents = json[language];
-            const contentsKeys = Object.keys(contents);
+            //onst contentsKeys = Object.keys(contents);
+
+            console.log(contents);
         })
         .catch(error => {
             console.error('Error fetching JSON:', error);

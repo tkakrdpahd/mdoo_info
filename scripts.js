@@ -7,23 +7,23 @@ function initializePage() {
 }
 
 function setupPageNavigation() {
+    // This is loding other pages logic
     const ids = [
         'index', 'profile', 'ArtDescriptions', 'DevDescriptions', 'contact'
     ];
-
     ids.forEach(id => {
         const element = document.getElementById(id);
         if (element) {
             element.addEventListener('click', event => {
                 event.preventDefault();
-                localStorage.setItem("page", id);
+                sessionStorage.setItem("page", id);
                 
                 if (id === 'index') {
                     window.location.href = '../index.html';
                 } else {
                     const currentPage = window.location.pathname.split('/').pop();
                     if (currentPage === 'detailPage.html') {
-                        location.reload();
+                        loadScript();
                     } else {
                         window.location.href = './html/detailPage.html';
                     }
@@ -33,13 +33,18 @@ function setupPageNavigation() {
     });
 
     // need to add change setting header li display setting none to block
-    
+
+    // This is li tag display setting
+    const pageId = localStorage.getItem("page");
+    if (pageId == null){
+        sessionStorage.setItem("page", "index");
+    }
 }
 // Need to add css for each page call
 
 // This is loading JavaScript for each page call
 function loadScript(callback) {
-    const pageId = localStorage.getItem("page");
+    const pageId = sessionStorage.getItem("page");
     const scriptSrc = '../js/' + pageId + '.js';
     const scripts = document.getElementsByTagName('script');
 
@@ -66,16 +71,16 @@ function loadScript(callback) {
 function langButtonEventListener() {
     if (localStorage.getItem("language") == null) {
         localStorage.setItem("language", "ko");
-        location.reload();
+        readAndWrite();
     }
 
     document.getElementById('korean').addEventListener('click', () => {
         localStorage.setItem("language", "ko");
-        location.reload();
+        readAndWrite();
     });
 
     document.getElementById('english').addEventListener('click', () => {
         localStorage.setItem("language", "en");
-        location.reload();
+        readAndWrite();
     });
 }
