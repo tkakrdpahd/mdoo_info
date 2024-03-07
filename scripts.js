@@ -2,12 +2,13 @@ document.addEventListener('DOMContentLoaded', initializePage);
 
 function initializePage() {
     const header = new HeaderSetting();
-    header.initSetting();
-    const contents = new ContentsSetting(header);
+    header.initSetting(); // 
+    header.settingLanguage(); // listen language setting onload
+    const contents = new ContentsDataSetting(header);
     header.setContentsSetting(contents);
-    contents.readAndWrite();
+    contents.loadJsonData();
 }
-
+// Class HeaderStting control the visibility of header and list.
 class HeaderSetting {
     constructor() {
         this.ids = ['index', 'profile', 'ArtDescriptions', 'DevDescriptions', 'contact'];
@@ -29,16 +30,17 @@ class HeaderSetting {
                     event.preventDefault(); 
                     this.currentPage = id;
 
+                    // Setting li visibility
                     this.setLiTag(); 
                     
                     if (this.contentsSetting) {
-                        this.contentsSetting.readAndWrite(); // ContentsSetting의 readAndWrite 메소드 호출
+                        this.contentsSetting.loadJsonData();
                     }
                 });
             }
         });
     
-        this.setVisibility();
+        this.setVisibility(); // Does header is visible?
     }    
 
     setVisibility() {
@@ -69,15 +71,27 @@ class HeaderSetting {
 
     settingLanguage() {
         // Language setting logic here (Placeholder for future implementation)
+        const korean = document.getElementById("korean");
+        const english = document.getElementById("english");
+
+        korean.addEventListener('click', (event) => {
+            this.currentLanguage = "ko";
+            this.contentsSetting.loadJsonData();
+        })
+
+        english.addEventListener('click', (event) => {
+            this.currentLanguage = "en";
+            this.contentsSetting.loadJsonData();
+        })
     }
 }
-
-class ContentsSetting {
+// Class ContentsDataSetting is pooling the json and js file
+class ContentsDataSetting {
     constructor(headerSetting) {
         this.headerSetting = headerSetting;
     }
 
-    readAndWrite() {
+    loadJsonData() {
         const contentsUrl = `/json/${this.headerSetting.currentPage}.json`;
         fetch(contentsUrl)
             .then(response => {
@@ -89,6 +103,8 @@ class ContentsSetting {
             .then(json => {
                 const language = this.headerSetting.currentLanguage;
                 const contents = json[language];
+
+                console.log(contents);
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -98,16 +114,25 @@ class ContentsSetting {
 
     loadJavaScript() {
         const scriptUrl = `/js/${this.headerSetting.currentPage}.js`;
-    
-        // 스크립트 요소 생성
+
+        // 문서에 있는 모든 스크립트 태그를 가져옴
+        const existingScripts = document.querySelectorAll('script');
+
+        // 이미 로드된 스크립트인지 확인하기 위해 순회
+        for (let script of existingScripts) {
+            if (script.getAttribute('src') === scriptUrl) {
+                console.log(`${scriptUrl} is already loaded.`);
+                return; // 스크립트가 이미 로드되어 있다면 추가 로드 방지
+            }
+        }
+
+        // 새 스크립트 요소 생성 및 설정
         const scriptElement = document.createElement('script');
         scriptElement.src = scriptUrl;
-    
-        // 스크립트 요소가 로드되었을 때 실행될 콜백 함수 설정 (선택 사항)
         scriptElement.onload = () => {
             console.log(`${scriptUrl} has been successfully loaded.`);
         };
-    
+
         // 스크립트 요소를 문서의 <body> 태그에 추가
         document.body.appendChild(scriptElement);
     }    
