@@ -28,7 +28,8 @@ class HeaderSetting {
                 element.addEventListener('click', (event) => {
                     event.preventDefault(); 
                     this.currentPage = id;
-                    console.log(this.currentPage); 
+
+                    this.setLiTag(); 
                     
                     if (this.contentsSetting) {
                         this.contentsSetting.readAndWrite(); // ContentsSetting의 readAndWrite 메소드 호출
@@ -52,8 +53,19 @@ class HeaderSetting {
     }
 
     setLiTag() {
-        // Li tag setting logic here (Placeholder for future implementation)
-    }
+        // 모든 li 요소를 찾아 display 속성을 none으로 설정
+        const allLi = document.querySelectorAll('li');
+        allLi.forEach(li => {
+            li.style.display = 'none';
+        });
+    
+        // this.currentPage ID를 가진 요소 하위의 li 요소들만 찾아 display 속성을 block으로 설정
+        const currentPageLi = document.querySelectorAll('#' + this.currentPage + ' li');
+        console.log(currentPageLi);
+        currentPageLi.forEach(li => {
+            li.style.display = 'block';
+        });
+    }        
 
     settingLanguage() {
         // Language setting logic here (Placeholder for future implementation)
@@ -77,8 +89,6 @@ class ContentsSetting {
             .then(json => {
                 const language = this.headerSetting.currentLanguage;
                 const contents = json[language];
-
-                console.log(contents);
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -100,8 +110,5 @@ class ContentsSetting {
     
         // 스크립트 요소를 문서의 <body> 태그에 추가
         document.body.appendChild(scriptElement);
-    
-        // 스크립트 URL 로깅
-        console.log(scriptUrl);
     }    
 }

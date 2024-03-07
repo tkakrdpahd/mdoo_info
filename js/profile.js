@@ -1,6 +1,4 @@
 // this is contents setting
-class contentsSettingk {
-  readAndWrite(){
-    
-  }
+class drawContents {
+  
 }
