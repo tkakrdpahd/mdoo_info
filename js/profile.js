@@ -4,7 +4,7 @@ class drawContents {
     }
 
     draw() {
-        const mainContents = document.getElementById("mainContents"); // Select mainContents element once
+        const mainContents = document.getElementById("mainContents");
 
         // Clear existing content
         mainContents.innerHTML = '';
@@ -23,7 +23,7 @@ class drawContents {
                     // Create a new element for this piece of data
                     const newElement = document.createElement('div');
                     newElement.innerHTML = contentEach;
-                    newElement.id = dataKey;
+                    newElement.className = dataKey;
 
                     // Append the new element to mainContents
                     mainContents.appendChild(newElement);
