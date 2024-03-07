@@ -4,6 +4,7 @@ function initializePage() {
     const header = new HeaderSetting();
     header.initSetting(); // 
     header.settingLanguage(); // listen language setting onload
+
     const contents = new ContentsDataSetting(header);
     header.setContentsSetting(contents);
     contents.loadJsonData();
@@ -60,10 +61,8 @@ class HeaderSetting {
         allLi.forEach(li => {
             li.style.display = 'none';
         });
-    
         // this.currentPage ID를 가진 요소 하위의 li 요소들만 찾아 display 속성을 block으로 설정
         const currentPageLi = document.querySelectorAll('#' + this.currentPage + ' li');
-        console.log(currentPageLi);
         currentPageLi.forEach(li => {
             li.style.display = 'block';
         });
@@ -89,51 +88,96 @@ class HeaderSetting {
 class ContentsDataSetting {
     constructor(headerSetting) {
         this.headerSetting = headerSetting;
+        this.contents
     }
 
-    loadJsonData() {
+    async loadJsonData() {
         const contentsUrl = `/json/${this.headerSetting.currentPage}.json`;
-        fetch(contentsUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(json => {
-                const language = this.headerSetting.currentLanguage;
-                const contents = json[language];
-
-                console.log(contents);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-    this.loadJavaScript();
+        try {
+            const response = await fetch(contentsUrl);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const json = await response.json();
+            const language = this.headerSetting.currentLanguage;
+            this.contents = json[language];
+            this.loadJavaScript(); // 이전 로직을 유지하면서, JSON 로딩이 완료된 후 스크립트 로딩을 시작합니다.
+        } catch (error) {
+            console.error('Error:', error);
+        }
     }
 
     loadJavaScript() {
         const scriptUrl = `/js/${this.headerSetting.currentPage}.js`;
-
-        // 문서에 있는 모든 스크립트 태그를 가져옴
         const existingScripts = document.querySelectorAll('script');
-
-        // 이미 로드된 스크립트인지 확인하기 위해 순회
+        
+        // 현재 로딩하려는 스크립트와 scripts.js를 제외한 모든 스크립트 삭제
+        existingScripts.forEach(script => {
+            if (script.src && script.src !== scriptUrl && !script.src.includes('scripts.js')) {
+                script.parentNode.removeChild(script);
+                console.log(`${script.src} has been removed.`);
+            }
+        });
+    
+        // 이미 로드된 스크립트인지 확인
         for (let script of existingScripts) {
             if (script.getAttribute('src') === scriptUrl) {
                 console.log(`${scriptUrl} is already loaded.`);
-                return; // 스크립트가 이미 로드되어 있다면 추가 로드 방지
+                this.loadDrawContents();
+                return;
             }
         }
-
+    
         // 새 스크립트 요소 생성 및 설정
         const scriptElement = document.createElement('script');
         scriptElement.src = scriptUrl;
         scriptElement.onload = () => {
             console.log(`${scriptUrl} has been successfully loaded.`);
+            this.loadDrawContents();
         };
+        
+        document.body.appendChild(scriptElement); // 스크립트 요소를 문서의 <body>에 추가
 
-        // 스크립트 요소를 문서의 <body> 태그에 추가
-        document.body.appendChild(scriptElement);
+        this.loadCSS();
+    }    
+    
+    loadCSS() {
+        const cssUrl = `/css/${this.headerSetting.currentPage}.css`;
+        const existingLinks = document.querySelectorAll('link[rel="stylesheet"]');
+    
+        // 이미 로드된 CSS 파일인지 확인
+        for (let link of existingLinks) {
+            if (link.href && link.href.endsWith(cssUrl)) {
+                console.log(`${cssUrl} is already loaded.`);
+                return; // 이미 로드된 경우, 함수 종료
+            }
+        }
+    
+        // 현재 로딩하려는 CSS와 style.css를 제외한 모든 CSS 삭제
+        existingLinks.forEach(link => {
+            if (link.href && !link.href.endsWith('style.css')) {
+                link.parentNode.removeChild(link);
+                console.log(`${link.href} has been removed.`);
+            }
+        });
+    
+        // 새로운 <link> 요소 생성 및 설정
+        const linkElement = document.createElement('link');
+        linkElement.rel = 'stylesheet';
+        linkElement.href = cssUrl;
+    
+        // <link> 요소를 문서의 <head>에 추가
+        document.head.appendChild(linkElement);
+        console.log(`${cssUrl} has been successfully loaded.`);
+    }        
+
+    loadDrawContents() {
+        // drawContents 클래스의 존재 여부를 확인
+        if (typeof drawContents !== 'undefined') {
+            const drawContentsInstance = new drawContents(this.contents); // Call calss drawContents
+            drawContentsInstance.draw();
+        } else {
+            console.error('drawContents class is not defined yet.');
+        }
     }    
 }
