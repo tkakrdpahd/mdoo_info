@@ -83,5 +83,25 @@ class ContentsSetting {
             .catch(error => {
                 console.error('Error:', error);
             });
+    this.loadJavaScript();
     }
+
+    loadJavaScript() {
+        const scriptUrl = `/js/${this.headerSetting.currentPage}.js`;
+    
+        // 스크립트 요소 생성
+        const scriptElement = document.createElement('script');
+        scriptElement.src = scriptUrl;
+    
+        // 스크립트 요소가 로드되었을 때 실행될 콜백 함수 설정 (선택 사항)
+        scriptElement.onload = () => {
+            console.log(`${scriptUrl} has been successfully loaded.`);
+        };
+    
+        // 스크립트 요소를 문서의 <body> 태그에 추가
+        document.body.appendChild(scriptElement);
+    
+        // 스크립트 URL 로깅
+        console.log(scriptUrl);
+    }    
 }
