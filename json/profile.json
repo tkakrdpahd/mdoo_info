@@ -1,15 +1,39 @@
 {
-  "ko": [
+  "ko":[
     {
       "personalInfo": {
         "name": "두민석",
-        "curriculum_vitae": "전체이력",
-        "contactInfo": "+82 010-8709-9490 | albert052609@gmail.com",
+        "curriculum_vitae": "마스터 이력서",
+        "contactInfo": "+1 (941) 321-6842 | albert052609@gmail.com",
         "portfolio": "mdoo_pri.artstation.com | github.com/tkakrdpahd"
       },
       "Summary": {
         "Summary": "요약",
-        "article": "저는 예술가, 디자이너, 게임 디자이너, 풀스택 개발자, 사운드 엔지니어이자, 인터랙티브 분야에서 연구를 수행하는 학자입니다. 디지털 미디어 이론, 현대 미디어 기술, 네트워크 엔지니어링 등의 영역에서 활동하고 있습니다."
+        "article": "저는 디지털 미디어 이론, 현대 미디어 기술, 네트워크 엔지니어링과 같은 분야에서 활동하고 있는 아티스트, 디자이너, 게임 디자이너, 풀스택 개발자, 사운드 엔지니어, 그리고 인터랙티브 분야에서 연구를 진행하는 학자입니다."
+      },
+      "Education": {
+        "Education": "학력",
+        "school01": "메릴랜드 예술대학(MICA)",
+        "school01Degree": "인터랙티브 아트 학사, 게임 아트 부전공",
+        "school01Date": "2023년 8월 - 2025년 5월",
+        "school02": "링링 예술대학(RCAD)",
+        "school02Degree": "게임 아트 / VR 개발 중퇴",
+        "school02Date": "2021년 8월 - 2023년 5월",
+        "school03": "고려대학교(KU)",
+        "school03Degree": "국제 여름 캠퍼스 (ISC)",
+        "school03Date": "2022년 6월 - 7월"
+      },
+      "ConferenceandPublication": {
+        "ConferenceandPublication": "학술대회 및 출판",
+        "ArtandSocialScience":"예술 / 사회과학",
+        "article01": "두민석. (2024; 접수대기 중). 엔터테인먼트의 미래: 플레이의 시리즈에서 상호작용과 몰입. The 9th World Conference on Media and Mass Communication.",
+        "article02": "두민석. (심사 점수 대기 중). 버튜버 혁명: 현대 미디어에서의 기원, 분기점 및 융합. 융합. Convergence. ?(?) pp ?? - ??. CON-24-0021",
+        "article03": "두민석. (2024). 버튜버 혁명: 현대 미디어에서의 기원, 분기점 및 융합. 융합. In Proceedings of the Global Conference on Media, Communication, and Film (MCFCONF), 1(1), Article 1.",
+        "article04": "M. Doo (With Editor). (2023). Unearthing the Essence of Video Games: An Analysis of Literary and Artistic Discourses. Semiotica, ?(?), pp. ??-??. SEMI.2023.0187",
+        "article05": "M. Doo. (2023). 게임 디자인의 전술: 플레이어빌리티와 게임성. 2023년 한국 게임 학회 봄 컨퍼런스, pp. 3-10.",
+        "ScienceandEmergingScience": "Science / Emerging Science",
+        "article06": "M. Doo. (2024; Pending). Critical review on decentralization of gaming servers with P2P service. In Proceedings of the 2024 IEEE Gaming, Entertainment, and Media Conference (GEM), 33, Article 1570994560.",
+        "article07": "두민석. 최한준. 나찬빈. (2024; 대기 중). DNS 시딩 및 그래프 기반 노드 찾기 기술을 기반으로 한 P2P 라이브 스트리밍 모듈 연구. 2024년 IEEE 기술 및 엔지니어링 관리 학회 혁신 기술 동향 컨퍼런스에서 발표. Article 10."
       }
     }
   ],
@@ -39,7 +63,15 @@
       },
       "ConferenceandPublication": {
         "ConferenceandPublication": "Conference and Publication",
-        "ArtandSocialScience":"Art / Social Science"
+        "ArtandSocialScience":"Art / Social Science",
+        "article01": "M. Doo. (2024; Pending). Future of Entertainment: Interaction and Immersive the Series of Play. Presented at The 9th World Conference on Media and Mass Communication.",
+        "article02": "M. Doo (Awaiting Reviewer Scores). The V-Tuber Wave: Origins, Divergence, and Convergence in Contemporary Media. Convergence. ?(?) pp ?? - ??. CON-24-0021",
+        "article03": "M. Doo. (2024). V-Tuber wave: Origins, divergence, and convergence in contemporary media. In Proceedings of the Global Conference on Media, Communication, and Film (MCFCONF), 1(1), Article 1.",
+        "article04": "M. Doo (With Editor). (2023). Unearthing the Essence of Video Games: An Analysis of Literary and Artistic Discourses. Semiotica, ?(?), pp. ??-??. SEMI.2023.0187",
+        "article05": "M. Doo. (2023). Tactic of game design: The playability and gameness. In Proceedings of the Korea Game Society 2023 Spring Conference, pp. 3-10.",
+        "ScienceandEmergingScience": "Science / Emerging Science",
+        "article06": "M. Doo. (2024; Pending). Critical review on decentralization of gaming servers with P2P service. In Proceedings of the 2024 IEEE Gaming, Entertainment, and Media Conference (GEM), 33, Article 1570994560.",
+        "article07": "M. Doo. J. Choi. and C. Na. (2024; Pending). The P2P Live-Streaming Module Study: Based on the DNS seeding, and Graph-Based Node Finding technology. In the 2024 IEEE Technology and Engineering Management Society Conference on Disruptive Technologies Trends. Article 10."
       }
     }
   ]

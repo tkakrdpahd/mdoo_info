@@ -89,8 +89,20 @@
             text-align: center;
         }
         .ArtandSocialScience {
-            font-size: 1.45rem;
+            font-size: 1.25rem;
             font-weight: 500;
+            padding-top: 0.25vw;
+            padding-bottom: 0.25;
+        }
+        .ScienceandEmergingScience {
+            font-size: 1.25rem;
+            font-weight: 500;
+            padding-top: 1.25vw;
+            padding-bottom: 0.25;
+        }
+        .article01, .article02, .article03,
+        .article04, .article05, .article06, .article07 {
+            padding: 1vw;
         }
     }
 }

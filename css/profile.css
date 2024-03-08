@@ -74,6 +74,18 @@
   text-align: center;
 }
 .mainContents div.ConferenceandPublication .ArtandSocialScience {
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   font-weight: 500;
+  padding-top: 0.25vw;
+  padding-bottom: 0.25;
+}
+.mainContents div.ConferenceandPublication .ScienceandEmergingScience {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-top: 1.25vw;
+  padding-bottom: 0.25;
+}
+.mainContents div.ConferenceandPublication .article01, .mainContents div.ConferenceandPublication .article02, .mainContents div.ConferenceandPublication .article03,
+.mainContents div.ConferenceandPublication .article04, .mainContents div.ConferenceandPublication .article05, .mainContents div.ConferenceandPublication .article06, .mainContents div.ConferenceandPublication .article07 {
+  padding: 1vw;
 }
