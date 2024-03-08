@@ -15,7 +15,7 @@ class HeaderSetting {
         this.ids = ['index', 'profile', 'ArtDescriptions', 'DevDescriptions', 'contact'];
         this.visibility = true;
         this.currentPage = "index";
-        this.currentLanguage = "ko";
+        this.currentLanguage = "en";
         this.contentsSetting = null; // ContentsSetting 참조를 위한 속성 추가
     }
 

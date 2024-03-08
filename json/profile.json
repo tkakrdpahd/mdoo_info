@@ -7,8 +7,8 @@
         "contactInfo": "+82 010-8709-9490 | albert052609@gmail.com",
         "portfolio": "mdoo_pri.artstation.com | github.com/tkakrdpahd"
       },
-      "Summery": {
-        "title": "요약",
+      "Summary": {
+        "Summary": "요약",
         "article": "저는 예술가, 디자이너, 게임 디자이너, 풀스택 개발자, 사운드 엔지니어이자, 인터랙티브 분야에서 연구를 수행하는 학자입니다. 디지털 미디어 이론, 현대 미디어 기술, 네트워크 엔지니어링 등의 영역에서 활동하고 있습니다."
       }
     }
@@ -37,9 +37,9 @@
         "school03Degree": "International Summer Campus",
         "school03Date": "Jun - July 2022"
       },
-      "Conference and Publication": {
+      "ConferenceandPublication": {
         "ConferenceandPublication": "Conference and Publication",
-        "ArtandSocial Science":"Art / Social Science"
+        "ArtandSocialScience":"Art / Social Science"
       }
     }
   ]

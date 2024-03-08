@@ -3,6 +3,20 @@
     margin: 0;
     padding: 0;
 }
+@mixin titleSetting{
+    margin-bottom: 1vw;
+    padding-bottom: 0.25vw;
+    border-bottom: #fff 0.1vw solid;
+
+    font-size: 1.65rem;
+    font-weight: 500;
+}
+@mixin boxSetting{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 1vw;
+}
 @mixin line{
     margin: auto;
     padding-top: 1vw;
@@ -11,57 +25,72 @@
 }
 // this is article setting
 .mainContents{
-    // this is career page setting
-    margin-right: 20vw;
+    @include reset;
+    margin: auto;
+    padding-top: 4vw;
+
+    width: 50vw;
+
     text-align: center;
 
-    // this is personal information setting
-    .personalInfo{
-        text-align: center;
+    .personalInfo {
+        @include reset();
+        margin-bottom: 2vw;
 
-        h1, h2, h3, h4 {
-            @include reset;
-            padding: 0.25vw;
-        }
-        h1 {
-            margin-top: 4vw;
+        display: flex;
+        flex-direction: column;
 
+        .name {
             font-size: 2rem;
             font-weight: 500;
         }
-        h2 {
-            margin-bottom: 1.5vw;
 
+        .curriculum_vitae {
             font-size: 1.25rem;
-            font-weight:300;
-        }
-        h3 {
-            font-size: 1.2rem;
             font-weight: 300;
+
+            padding-bottom: 1vw;
         }
-        h4 {
-            font-size: 0.9rem;
+
+        .contactInfo, .portfolio {
+            font-size: 0.85rem;
             font-weight: 300;
-        }
-        p {
-            @include line;
         }
     }
-        .Summery {
-        text-align: center;
-        h1{
-            margin-bottom: 1.5vw;
-            font-size: 1.5rem;
-            font-weight:500;
+    div.Summary{
+        @include boxSetting();
+
+        span.Summary{
+            @include titleSetting();
         }
-        h2 {
-            width: 59vw;
-            margin: auto;
-            font-size: 1rem;
+    }
+    div.Education {
+        @include boxSetting();
+
+        span.Education{
+            @include titleSetting();
+        }
+        .school01, .school02, .school03 {
+            font-weight: 500;
+        }
+        .school01Date,  .school02Date{
+            margin-bottom: 1vw;
+        }
+        .school01Degree, .school02Degree{
             font-weight: 300;
         }
-        p {
-            @include line
+    }
+    div.ConferenceandPublication {
+        @include boxSetting();
+        text-align: left;
+
+        span.ConferenceandPublication {
+            @include titleSetting();
+            text-align: center;
+        }
+        .ArtandSocialScience {
+            font-size: 1.45rem;
+            font-weight: 500;
         }
     }
 }
