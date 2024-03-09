@@ -84,13 +84,14 @@ class HeaderSetting {
         })
     }
 }
-// Class ContentsDataSetting is pooling the json and js file
+// Class ContentsDataSetting manages loading and applying JSON, JavaScript, and CSS resources based on header settings.
 class ContentsDataSetting {
     constructor(headerSetting) {
         this.headerSetting = headerSetting;
-        this.contents
+        this.contents = null; // Initialize contents as null
     }
 
+    // Loads JSON data based on the current page and language, then triggers JavaScript loading.
     async loadJsonData() {
         const contentsUrl = `/json/${this.headerSetting.currentPage}.json`;
         try {
@@ -99,99 +100,66 @@ class ContentsDataSetting {
                 throw new Error('Network response was not ok');
             }
             const json = await response.json();
-            const language = this.headerSetting.currentLanguage;
-            this.contents = json[language];
-    
-            // 모듈 경로를 생성하고, 해당 모듈을 동적으로 불러옴
-            const modulePath = `/js/${this.headerSetting.currentPage}.js`;
-            const pageModule = await import(modulePath);
-            
-            // 동적으로 불러온 모듈에서 drawContents 클래스의 인스턴스를 생성
-            const drawContentsClassName = Object.keys(pageModule)[0]; // 모듈에서 첫 번째로 내보낸 클래스 이름을 가져옴
-            const DrawContentsClass = pageModule[drawContentsClassName];
-            if (DrawContentsClass) {
-                const drawContentsInstance = new DrawContentsClass(this.contents);
+            this.contents = json[this.headerSetting.currentLanguage];
+            this.loadJavaScript(); // Proceed to load JavaScript after JSON is loaded
+        } catch (error) {
+            console.error('Error loading JSON:', error);
+        }
+    }
+
+    // Loads JavaScript dynamically and ensures the necessary class is available before proceeding.
+    async loadJavaScript() {
+        const scriptUrl = `/js/${this.headerSetting.currentPage}.js`;
+
+        // Remove any script not related to the current script or the main script file
+        this.cleanupScripts(scriptUrl);
+
+        try {
+            const pageModule = await import(scriptUrl); // Dynamically import the current page's script
+
+            // After importing, check if drawContents is defined
+            if (pageModule && pageModule.drawContents) {
+                const drawContentsInstance = new pageModule.drawContents(this.contents);
                 drawContentsInstance.draw();
+            } else {
+                console.error('drawContents class is not defined after module import.');
             }
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Error loading JavaScript module:', error);
         }
-        this.loadJavaScript();
-    }    
 
-    loadJavaScript() {
-        const scriptUrl = `/js/${this.headerSetting.currentPage}.js`;
-        const existingScripts = document.querySelectorAll('script');
-        
-        // 현재 로딩하려는 스크립트와 scripts.js를 제외한 모든 스크립트 삭제
-        existingScripts.forEach(script => {
-            if (script.src && script.src !== scriptUrl && !script.src.includes('scripts.js')) {
-                script.parentNode.removeChild(script);
+        this.loadCSS(); // Proceed to load CSS after JavaScript
+    }
+
+    // Removes all scripts except the current script and the main script file
+    cleanupScripts(keepScriptUrl) {
+        document.querySelectorAll('script').forEach(script => {
+            if (script.src && script.src !== keepScriptUrl && !script.src.includes('scripts.js')) {
+                script.remove();
                 console.log(`${script.src} has been removed.`);
             }
         });
-    
-        // 이미 로드된 스크립트인지 확인
-        for (let script of existingScripts) {
-            if (script.getAttribute('src') === scriptUrl) {
-                console.log(`${scriptUrl} is already loaded.`);
-                this.loadDrawContents();
-                return;
-            }
-        }
-    
-        // 새 스크립트 요소 생성 및 설정
-        const scriptElement = document.createElement('script');
-        scriptElement.src = scriptUrl;
-        scriptElement.onload = () => {
-            console.log(`${scriptUrl} has been successfully loaded.`);
-            this.loadDrawContents();
-        };
-        
-        document.body.appendChild(scriptElement); // 스크립트 요소를 문서의 <body>에 추가
+    }
 
-        this.loadCSS();
-    }    
-    
+    // Loads the CSS file corresponding to the current page, replacing any previously loaded CSS.
     loadCSS() {
         const cssUrl = `/css/${this.headerSetting.currentPage}.css`;
-        const existingLinks = document.querySelectorAll('link[rel="stylesheet"]');
-    
-        // 이미 로드된 CSS 파일인지 확인
-        for (let link of existingLinks) {
-            if (link.href && link.href.endsWith(cssUrl)) {
-                console.log(`${cssUrl} is already loaded.`);
-                return; // 이미 로드된 경우, 함수 종료
-            }
-        }
-    
-        // 현재 로딩하려는 CSS와 style.css를 제외한 모든 CSS 삭제
-        existingLinks.forEach(link => {
-            if (link.href && !link.href.endsWith('style.css')) {
-                link.parentNode.removeChild(link);
-                console.log(`${link.href} has been removed.`);
-            }
-        });
-    
-        // 새로운 <link> 요소 생성 및 설정
+        this.cleanupCSS(); // Remove all non-main CSS files
+
         const linkElement = document.createElement('link');
         linkElement.rel = 'stylesheet';
         linkElement.href = cssUrl;
-    
-        // <link> 요소를 문서의 <head>에 추가
         document.head.appendChild(linkElement);
         console.log(`${cssUrl} has been successfully loaded.`);
+    }
 
-        this.oadDrawContents();
-    }        
-
-    loadDrawContents() {
-        // drawContents 클래스의 존재 여부를 확인
-        if (typeof drawContents !== 'undefined') {
-            const drawContentsInstance = new drawContents(this.contents); // Call calss drawContents
-            drawContentsInstance.draw();
-        } else {
-            console.error('drawContents class is not defined yet.');
-        }
-    }    
+    // Removes all non-main CSS links from the document
+    cleanupCSS() {
+        document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+            if (link.href && !link.href.endsWith('style.css')) {
+                link.remove();
+                console.log(`${link.href} has been removed.`);
+            }
+        });
+    }
 }

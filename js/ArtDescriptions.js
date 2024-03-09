@@ -1,4 +1,4 @@
-class drawContents {
+export class drawContents {
     constructor(onloadJson) {
         this.onloadJson = onloadJson;
     }
