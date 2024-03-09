@@ -8,8 +8,14 @@
     padding-bottom: 0.25vw;
     border-bottom: #fff 0.1vw solid;
 
-    font-size: 1.65rem;
+    font-size: 1.5rem;
     font-weight: 500;
+}
+@mixin subtitleSetting{
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-top: 1.25vw;
+    padding-bottom: 0.25;
 }
 @mixin boxSetting{
     display: flex;
@@ -59,9 +65,10 @@
     }
     div.Summary{
         @include boxSetting();
-
+        text-align: left;
         span.Summary{
             @include titleSetting();
+            text-align: center;
         }
     }
     div.Education {
@@ -70,13 +77,15 @@
         span.Education{
             @include titleSetting();
         }
-        .school01, .school02, .school03 {
+        .school{
+            padding-top: 1vw;
             font-weight: 500;
         }
-        .school01Date,  .school02Date{
+        .schoolDate{
             margin-bottom: 1vw;
+            font-weight: 300;
         }
-        .school01Degree, .school02Degree{
+        .schoolDegree{
             font-weight: 300;
         }
     }
@@ -89,20 +98,42 @@
             text-align: center;
         }
         .ArtandSocialScience {
-            font-size: 1.25rem;
-            font-weight: 500;
-            padding-top: 0.25vw;
-            padding-bottom: 0.25;
+            @include subtitleSetting();
         }
         .ScienceandEmergingScience {
-            font-size: 1.25rem;
-            font-weight: 500;
-            padding-top: 1.25vw;
-            padding-bottom: 0.25;
+            @include subtitleSetting();
         }
-        .article01, .article02, .article03,
-        .article04, .article05, .article06, .article07 {
+        a{
+            text-decoration: underline;
+        }
+        .article {
             padding: 1vw;
+            font-weight: 300;
+        }
+    }
+    div.Experience{
+        @include boxSetting();
+        text-align: left;
+        span.Experience{
+            @include titleSetting();
+            text-align: center;
+        }
+        .SoloProjects{
+            @include subtitleSetting();
+        }
+        .TeamProject{
+            @include subtitleSetting();
+        }
+        a{
+            text-decoration: underline;
+        }
+        .title {
+            padding: 1vw;
+            font-weight: 500;
+        }
+        .article {
+            padding-left: 1vw;
+            font-weight: 300;
         }
     }
 }

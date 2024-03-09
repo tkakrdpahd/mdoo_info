@@ -1,4 +1,4 @@
-class drawContents {
+export class drawContents {
     constructor(onloadJson) {
         this.onloadJson = onloadJson;
     }
@@ -27,16 +27,20 @@ class drawContents {
 
                 dataKeys.forEach(dataKey => {
                     const contentEach = data[dataKey];
-
+                
+                    // Use a regular expression to remove digits from the end of the dataKey
+                    const className = dataKey.replace(/\d+$/, '');
+                
                     // Create a new element for this piece of data
                     const newChildElement = document.createElement('span');
                     newChildElement.innerHTML = contentEach;
-                    newChildElement.className = dataKey;
-
+                    // Set the class name to the modified dataKey without digits
+                    newChildElement.className = className;
+                
                     // Append the new child element to the new parent element
                     newParentElement.appendChild(newChildElement);
-                });
+                });                
             });
         }
-    }    
+    }
 }

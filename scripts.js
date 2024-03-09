@@ -101,11 +101,23 @@ class ContentsDataSetting {
             const json = await response.json();
             const language = this.headerSetting.currentLanguage;
             this.contents = json[language];
-            this.loadJavaScript(); // 이전 로직을 유지하면서, JSON 로딩이 완료된 후 스크립트 로딩을 시작합니다.
+    
+            // 모듈 경로를 생성하고, 해당 모듈을 동적으로 불러옴
+            const modulePath = `/js/${this.headerSetting.currentPage}.js`;
+            const pageModule = await import(modulePath);
+            
+            // 동적으로 불러온 모듈에서 drawContents 클래스의 인스턴스를 생성
+            const drawContentsClassName = Object.keys(pageModule)[0]; // 모듈에서 첫 번째로 내보낸 클래스 이름을 가져옴
+            const DrawContentsClass = pageModule[drawContentsClassName];
+            if (DrawContentsClass) {
+                const drawContentsInstance = new DrawContentsClass(this.contents);
+                drawContentsInstance.draw();
+            }
         } catch (error) {
             console.error('Error:', error);
         }
-    }
+        this.loadJavaScript();
+    }    
 
     loadJavaScript() {
         const scriptUrl = `/js/${this.headerSetting.currentPage}.js`;
@@ -169,6 +181,8 @@ class ContentsDataSetting {
         // <link> 요소를 문서의 <head>에 추가
         document.head.appendChild(linkElement);
         console.log(`${cssUrl} has been successfully loaded.`);
+
+        this.oadDrawContents();
     }        
 
     loadDrawContents() {
