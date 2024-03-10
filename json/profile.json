@@ -113,9 +113,18 @@
         "article08": "M. Doo. (2024; Currently Working On). Theory of 3D/2D Vector and Mash Design: with Live2D Cubism and Blender",
         "article06": "M. Doo. (2024; Pending). Critical review on decentralization of gaming servers with P2P service. In Proceedings of the 2024 IEEE Gaming, Entertainment, and Media Conference (GEM), 33, Article 1570994560.",
         "article07": "M. Doo. J. Choi. and C. Na. (2024; Pending). The P2P Live-Streaming Module Study: Based on the DNS seeding, and Graph-Based Node Finding technology. In the 2024 IEEE Technology and Engineering Management Society Conference on Disruptive Technologies Trends. Article 10."
-      }
-    },
-    {
+      },
+      "Skills": {
+        "Skills": "Skills",
+        "title01":"Fine Art, Design & Visualization",
+        "skillSet01": " - Fine Art: Oil Painting, Acrylic Painting, Gouache Painting, Drawing, Stone Sculpting",
+        "skillSet02": " - 2D & Image Editing: Adobe Photoshop (CS3 - CC), Procreate, Adobe InDesign, Adobe Dreamweaver, Adobe XD, Figma, Clip Studio",
+        "skillSet03": " - 3D Modeling & Animation: Maya, Blender, ZBrush (2021 - 2023), Substance Painter, Houdini",
+        "skillSet04": " - Video Editing & Streaming: Adobe Premier Pro, OBS Studio, DaVinci Resolve",
+        "title02": "Programming Languages & Technologies",
+        "skillSet05": "- Languages: C, C++, C#, Python, Java, JavaScript",
+        "skillSet06": " - Web Development & Frameworks: HTML5, SCSS(CSS3), Node.js, Socket.io, P5.JS"
+      },
       "Experience": {
         "Experience": "Experience ",
         "SoloProjects": "Solo Projects",
@@ -123,7 +132,7 @@
         "article01": "Media trends stress rethinking digital interaction's role, now vital for entertainment, focusing on performative and interactive engagement.",
         "title02": "2024: Remix as Acapella MICA: IA 390",
         "article02":"",
-        "title03": "2024: My Web Page Full-stack Website Development",
+        "title03": "2024: My Web Page Full-stack Website Development<a href='https://github.com/tkakrdpahd/MyWebPageFrontEnd' style='color: DarkMagenta;'>GitHub Repo</a>",
         "article03": "Full web-page development.",
         "title04": "2024: Get Into GRBWB MICA: GMD<a href='https://mdoo12.itch.io/get-into-grbwb' style='color: yellow;'>Itch.io Repo</a>",
         "article04": "A 2D Unity game where players navigate colored areas within time limits. It includes 'start', 'level', and 'end' scenes, space bar navigation, and uses RigidBody2D and Polygon Collider 2D for movement.",

@@ -23,12 +23,6 @@
 
     margin-bottom: 1vw;
 }
-@mixin line{
-    margin: auto;
-    padding-top: 1vw;
-    width: 60vw;
-    border-bottom: #fff 0.1vw solid;
-}
 // this is article setting
 .mainContents{
     @include reset;
@@ -109,6 +103,20 @@
         .article {
             padding: 1vw;
             font-weight: 300;
+        }
+    }
+    div.Skills{
+        @include boxSetting();
+        text-align: left;
+        span.Skills{
+            @include titleSetting();
+            text-align: center;
+        }
+        .title{
+            @include subtitleSetting();
+        }
+        .skillSet{
+            padding: 1vw;
         }
     }
     div.Experience{
