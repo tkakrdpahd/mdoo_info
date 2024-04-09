@@ -140,7 +140,7 @@
                 margin: 0;
                 padding: 0;
 
-                font-size: 4rem;
+                font-size: 3rem;
             }
             section {
                 display: flex; // section을 flex 컨테이너로 설정
@@ -176,14 +176,14 @@
             font-size: 1.5rem;
             ul{
                 margin: 0;
-                padding-right: 15vw;
+                padding-right: 35vw;
 
                 list-style: none; 
 
                 display: flex; // Flexbox 사용
                 flex-direction: column; // 항목들을 세로 방향으로 정렬
                 flex-wrap: wrap; // 컨테이너 높이를 초과할 경우 다음 열로 넘김
-                max-height: 20vw; // ul의 최대 높이 설정
+                max-height: 12.5vw; // ul의 최대 높이 설정
                 height: 100%; // ul의 높이를 부모(nav)의 높이만큼 설정
 
                 li{
