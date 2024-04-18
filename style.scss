@@ -67,15 +67,33 @@
                 padding: 0;
                 display: flex; 
                 list-style: none; 
-        
-                li{
-                    margin-right: 2vw;
+
+                h4 {
+                    margin: 0;
+                    padding: 0;
+                    margin-right: 4vw;
                 }
-                li:last-child {
+
+                h4:last-child {
                     margin-right: 0;
                 }
             }
-        }     
+            .subMenu {
+                display: block;
+                opacity: 0;
+                max-height: 0;
+                visibility: hidden;
+                overflow: hidden; /* 내용이 넘치는 것을 숨김 */
+                transition: visibility 0s, opacity 0.5s linear, max-height 0.5s ease-in-out;
+            }
+            
+            li:hover .subMenu {
+                visibility: visible;
+                opacity: 1;
+                padding-top: 1vw;
+                max-height: 5vw; /* 최대 높이 값을 조정하세요 */
+            }                
+        }    
     }
     article{
         margin: 2vw;
