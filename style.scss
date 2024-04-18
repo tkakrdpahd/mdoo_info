@@ -1,20 +1,22 @@
 // this is my web page css
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
 
 @media screen and (min-width: 1080px) {
     body{
-        margin: 0;
-        padding: 0; 
+        @include reset;
 
         font-family: 'Noto Sans KR', sans-serif;
         font-weight: 500;
     }
     header{
-        margin: 0;
         padding: 1vw; 
         
         display: flex;
-        align-items: center;
+        align-items: top;
         justify-content: space-between;
 
         border-bottom: solid 0.125vw #000;
@@ -24,38 +26,44 @@
         }
         div{
             display: flex;
-            align-items: center;
             h1{
-                margin: 0;
-                padding: 0;
+                @include reset;
             }
             section {
-                margin-left: 2vw;
                 display: flex; // section을 flex 컨테이너로 설정
                 flex-direction: row; // 아이템들을 수평으로 정렬
-              
+                align-items: self-start;
+
+                margin-left: 2vw;
+                padding-top: 1.25vh;
+
                 button {
-                  width: 2vw;
-                  height: 2vw;
-                  margin-right: 0.5vw;
-                  font-size: 0.85rem;
-                  font-weight: 500;
-                  color: #fff;
-                  background-color: #171717;
-                  border: solid black;
-                  border-radius: 50%;
-                  display: flex;
-                  justify-content: center; // 버튼 내의 텍스트를 수평 중앙에 정렬
-                  align-items: center; // 버튼 내의 텍스트를 수직 중앙에 정렬
-              
-                  &:hover {
-                    background: #fff;
-                    color: #000;
-                  }
-              
-                  &:last-child {
-                    margin-right: 0; // 마지막 버튼의 오른쪽 마진 제거
-                  }
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: 1.65vw;
+                    height: 1.65vw;
+
+                    margin-right: 0.5vw;
+
+                    font-size: 0.75rem;
+                    font-weight: 500;
+
+                    color: #fff;
+                    background-color: #171717;
+
+                    border: .125vw solid black;
+                    border-radius: 50%;
+                
+                    &:hover {
+                        background: #fff;
+                        color: #000;
+                    }
+                
+                    &:last-child {
+                        margin-right: 0; // 마지막 버튼의 오른쪽 마진 제거
+                    }
                 }
               }         
         }
@@ -63,19 +71,21 @@
             display: flex;
             padding: 0.5vw;
             ul{
-                margin: 0;
-                padding: 0;
+                @include reset;
                 display: flex; 
                 list-style: none; 
 
                 h4 {
-                    margin: 0;
-                    padding: 0;
+                    @include reset;
                     margin-right: 4vw;
                 }
 
-                h4:last-child {
-                    margin-right: 0;
+                ul li{
+                    font-weight: 300;
+                    padding-bottom: .5vh;
+                }
+                ul li:last-child {
+                    padding-bottom: 0;
                 }
             }
             .subMenu {
@@ -84,7 +94,7 @@
                 max-height: 0;
                 visibility: hidden;
                 overflow: hidden; /* 내용이 넘치는 것을 숨김 */
-                transition: visibility 0s, opacity 0.5s linear, max-height 0.5s ease-in-out;
+                transition: visibility 0s, opacity .5s linear, max-height .5s ease-in-out;
             }
             
             li:hover .subMenu {
@@ -127,8 +137,7 @@
 
         text-align: center;
         p{
-            margin: 0;
-            padding: 0;
+            @include reset;
         }
     }
 }
