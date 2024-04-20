@@ -5,13 +5,32 @@
     padding: 0;
 }
 
-@media screen and (min-width: 1080px) {
-    body{
-        @include reset;
-
-        font-family: 'Noto Sans KR', sans-serif;
-        font-weight: 500;
+body{
+    @include reset;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    // Hide scroll bar
+    & {
+        -ms-overflow-style: none; // IE
+        scrollbar-width: none; // Firefox
+      }
+    &::-webkit-scrollbar {
+        display: none; // Other
     }
+}
+footer{
+    margin: 2vw;
+
+    font-weight: 300;
+    font-size: .85rem;
+
+    text-align: center;
+    p{
+        @include reset;
+    }
+}
+
+@media screen and (min-width: 1080px) {
     header{
         display: flex;
         align-items: top;
@@ -33,33 +52,29 @@
                 padding-left: 1vw;
             }
             section {
-                display: none;
+                display: block;
                 position: fixed;
                 bottom: 1vh;
                 margin: .25vw;
-
                 background-color: #fff;
-
-                border: .1vw solid black;
-
                 button {
                     display: flex;
                     justify-content: center;
                     align-items: center;
 
-                    width: 1.65vw;
-                    height: 1.65vw;
+                    width: 2.5vw;
+                    height: 2.5vw;
 
                     margin: .5vw;
 
-                    font-size: 0.75rem;
+                    font-size: 1rem;
                     font-weight: 500;
 
                     color: #fff;
                     background-color: #000;
 
                     border: .125vw solid black;
-                    //border-radius: 50%;
+                    border-radius: 50%;
 
                     &:hover {
                         background: #fff;
@@ -81,7 +96,7 @@
 
                 h4 {
                     @include reset;
-                    margin-right: 3.5vw;
+                    margin-right: 4vw;
                 }
 
                 ul li{
@@ -100,7 +115,7 @@
                 opacity: 0;
                 max-height: 0;
                 visibility: hidden;
-                overflow: hidden; /* 내용이 넘치는 것을 숨김 */
+                overflow: hidden;
                 transition: visibility 0s, opacity .5s linear, max-height .5s ease-in-out;
             }
             
@@ -108,54 +123,42 @@
                 visibility: visible;
                 opacity: 1;
                 padding-top: 1vw;
-                max-height: 5vw; /* 최대 높이 값을 조정하세요 */
+                max-height: 5vw;
             }                
         }    
     }
     article{
         margin: 2vw;
         h1, h2, h3, h4 {
+            @include reset();
             font-weight: 300;
         }
-        img{
-            display: block;
-
-            width: 50vw;
-            height: auto;
-
-            margin: auto;
-        }
-        div{
-            margin: 0;
-            padding-top: 2vw;
-
-            text-align: center;
-            h4{
-                margin: 0;
-                padding: 0;
-            }
+    }
+    .article_02 {
+        h2 {
+            font-weight: 500;
         }
     }
-    footer{
-        margin: 2vw;
-
-        font-weight: 300;
-        font-size: 0.85rem;
-
+    .article_03 {
+        display: flex;
         text-align: center;
-        p{
-            @include reset;
+        justify-content: center;
+        img{
+            width: 50vw;
+        }
+        div{
+            padding-top: 2vw;
+            h4{
+                @include reset();
+            }
+        }
+        .SNS {
+            position: absolute;
+            margin-left: 75vw;
         }
     }
 }
 @media screen and (max-width: 1079px) {
-    body{
-        margin: 0;
-        padding: 0; 
-
-        font-family: 'Noto Sans KR', sans-serif;
-        font-weight: 500;
-    }
     header{
         margin: 0;
         padding: 1vw; 
@@ -252,18 +255,6 @@
                 margin: 0;
                 padding: 0;
             }
-        }
-    }
-    footer{
-        margin: 2vw;
-
-        font-weight: 300;
-        font-size: 0.85rem;
-
-        text-align: center;
-        p{
-            margin: 0;
-            padding: 0;
         }
     }
 }
