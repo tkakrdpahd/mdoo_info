@@ -228,18 +228,18 @@ footer{
                 font-size: 4rem;
             }
             li{
-                padding-right: 3.5vw;
                 h4 {
                     @include reset();
                     font-size: 1.5rem;
                     font-weight: 400;
+                    padding-right: 3.5vw;
                 }
                 ul {
                     display: none;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    align-items: center;
+                    text-align: center;
                     position: fixed;
                     top: 0;
                     left: 0;
@@ -251,10 +251,7 @@ footer{
                         font-size: 8.5vw;
                         color: white;
                     }      
-                }
-                &:last-child {
-                    padding-right: 1.5vw;
-                }             
+                }      
             }
         }
         //}     
