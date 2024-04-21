@@ -3,12 +3,14 @@ document.addEventListener('DOMContentLoaded', initializePage);
 function initializePage() {
     let newHeader = new Header();
     newHeader.navigationRedirect();
+    newHeader.setCssForMobile();
 }
 
 class Header {
     constructor() {
         this.language = 'ko';
         this.ids = ['index', 'curriculumVitae', 'linkedIn', 'enBlog', 'krBlog', 'artStation', 'gitHub', 'itchIo'];
+        this.h4Ids = ['profileAndSns', 'blog', 'portfolios'];
         this.pageMap = {
             'index': 'https://www.mdoo.info',
             'curriculumVitae': 'https://ftp.mdoo.info/Documents/Resume.pdf',
@@ -35,7 +37,35 @@ class Header {
             }
         });
     }
+
+    setCssForMobile() {
+        this.h4Ids.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.addEventListener('click', event => {
+                    if (window.innerWidth <= 1079) {
+                        const listItems = element.querySelectorAll('ul');
+                        listItems.forEach(ul => {
+                            ul.style.display = 'flex';  // Display the UL in a flex layout
+                        });
     
+                        // Display the 'x' button to close the ULs
+                        const button = document.getElementById('ulButton');
+                        if (button) {
+                            button.style.display = 'block';  // Make the button visible
+                            button.onclick = () => {  // Add a click event listener to the button
+                                listItems.forEach(ul => {
+                                    ul.style.display = 'none';
+                                });
+                                button.style.display = 'none';
+                            };
+                        }
+                    }
+                });
+            }
+        });
+    }    
+
     // this is language button eventListener
     langButtonEventListener() {
         if (!localStorage.getItem("language")) {
