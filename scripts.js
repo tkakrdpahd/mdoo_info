@@ -46,13 +46,12 @@ class Header {
                     if (window.innerWidth <= 1079) {
                         const listItems = element.querySelectorAll('ul');
                         listItems.forEach(ul => {
-                            ul.style.display = 'flex';  // Display the UL in a flex layout
+                            ul.style.display = 'flex';
                         });
-    
-                        // Display the 'x' button to close the ULs
+
                         const button = document.getElementById('ulButton');
                         if (button) {
-                            button.style.display = 'block';  // Make the button visible
+                            button.style.display = 'block';
                             button.onclick = () => {  // Add a click event listener to the button
                                 listItems.forEach(ul => {
                                     ul.style.display = 'none';

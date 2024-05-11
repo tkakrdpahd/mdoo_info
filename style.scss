@@ -220,12 +220,19 @@ footer{
             button{
                 display: none;
 
+                background-color: transparent;
+                border: none;
                 position: fixed;
-                z-index: 1001;
+
                 top: 5vw;
                 left: 5vw;
 
-                font-size: 4rem;
+                z-index: 1001;
+                span {
+                    color: #fff;
+                    font-size: 4rem;
+                    font-weight: 300
+                }
             }
             li{
                 h4 {
@@ -249,6 +256,7 @@ footer{
                     z-index: 1000;
                     a {
                         font-size: 8.5vw;
+                        font-weight: 300;
                         color: white;
                     }      
                 }      
