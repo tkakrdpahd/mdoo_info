@@ -3,7 +3,7 @@
 header{
     @include marginPaddingSetting(0%, .5vw);
     display: flex;
-    align-items: top;
+    align-items: center;
     justify-content: space-between;
 
     border-bottom: solid 0.125vw $primary-color;
