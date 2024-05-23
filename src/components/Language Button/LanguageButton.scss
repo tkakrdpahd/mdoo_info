@@ -1,0 +1,35 @@
+@import '../../styles/Variable.scss';
+
+section {
+    @include marginPaddingSetting(.25vw, );
+    display: block;
+    position: fixed;
+    bottom: 1vh;
+    background-color: transparent;
+    button {
+        @include marginPaddingSetting(.5vw, );
+        @include fontSetting(500, 1rem, );
+        $buttonSize: 2.5vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: $buttonSize;
+        height: $buttonSize;
+
+        color: $secondary-color;
+        background-color: $primary-color;
+
+        border: .125vw solid $primary-color;
+        border-radius: 50%;
+
+        &:hover {
+            background: $secondary-color;
+            color: $primary-color;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+} 

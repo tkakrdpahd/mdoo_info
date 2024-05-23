@@ -1,0 +1,42 @@
+@import './Variable.scss';
+
+@media screen and (min-width: 1080px) {
+    nav{
+        display: flex;
+        padding: 1vw;
+        ul{
+            display: flex;
+            list-style: none;
+            button {
+                display: none;
+            }
+            ul li {
+                padding-right: 2vw;
+                padding-bottom: .5vh;
+                @include fontSetting(300);
+                &:last-child {
+                    padding-right: 0;
+                    padding-bottom: 0;
+                }
+            }
+            &:last-child {
+                padding-right: .5vw;
+            }
+        }
+        .subMenu {
+            display: block;
+            opacity: 0;
+            max-height: 0;
+            visibility: hidden;
+            overflow: hidden;
+            transition: visibility 0s, opacity .5s linear, max-height .5s ease-in-out;
+        }
+        
+        &:hover .subMenu {
+            visibility: visible;
+            opacity: 1;
+            padding-top: 1vw;
+            max-height: 10vw;
+        }                
+    }
+}

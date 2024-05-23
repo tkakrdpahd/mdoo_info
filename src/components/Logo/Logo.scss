@@ -1,0 +1,6 @@
+@import '../../styles/Variable.scss';
+
+h1{
+    @include marginPaddingSetting(.5vw, );
+    padding-left: 1vw;
+}
