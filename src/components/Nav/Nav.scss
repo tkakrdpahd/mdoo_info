@@ -40,3 +40,55 @@
         }                
     }
 }
+
+@media screen and (max-width: 1079px) {
+        //nav{
+        ul{
+            display: flex;
+            list-style: none; 
+            align-items: center;
+            button{
+                display: none;
+
+                background-color: transparent;
+                border: none;
+                position: fixed;
+
+                top: 5vw;
+                left: 5vw;
+
+                z-index: 1001;
+                span {
+                    color: $secondary-color;
+                    font-size: 4rem;
+                    font-weight: 300
+                }
+            }
+            li{
+                h4 {
+                    @include fontSetting(400, 1.5rem, );
+                    padding-right: 3.5vw;
+                }
+                ul {
+                    display: none;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: gray;
+                    z-index: 1000;
+                    a {
+                        font-size: 8.5vw;
+                        font-weight: 300;
+                        color: $secondary-color;
+                    }      
+                }      
+            }
+        }
+        //}     
+}
