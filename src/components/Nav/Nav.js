@@ -68,7 +68,8 @@ function Nav() {
                 <li id="shop">
                     <h4>Shop</h4>
                     <ul className="subMenu">
-                        <li><a href="https://kmong.com/gig/553495">Kmong</a></li>
+                        <li><a href="https://kmong.com/@%EC%82%AC%EB%AA%BD%54%41" target="_blank" rel="noreferrer noopener">Kmong</a></li>
+                        <li><a href="https://www.paypal.com/ncp/payment/CQF7NLNYYKTKE" target="_blank" rel="noreferrer noopener">PayPal</a></li>
                     </ul>
                 </li>
             </ul>
