@@ -1,4 +1,5 @@
-@import './_variable.scss';
+@import './variable';
+@import './mixins';
 
 *{
     @include reset();
@@ -6,9 +7,4 @@
 body{
     @include fontSetting(500);
     font-family: $primary-font;
-}
-footer{
-    @include marginPaddingSetting(2vw, );
-    @include fontSetting(300, .85rem, );
-    text-align: center;
 }

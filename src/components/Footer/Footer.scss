@@ -1,0 +1,32 @@
+// test 
+@import '../../styles/variable';
+@import '../../styles/mixins';
+
+@media screen and (min-width: 1080px) {
+    footer {
+        margin-bottom: 2vh;
+        @include fontSetting(300, .85rem);
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1079px) {
+    #root{
+        display: flex;
+        flex-direction: column;
+        min-height: 90vh;
+    }
+    div {
+        flex: 1;
+    }
+    footer {
+        margin-bottom: 2vh;
+        @include fontSetting(300, .65rem);
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+    }
+}
