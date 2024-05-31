@@ -3,7 +3,7 @@
     <head>
         <title>MINSEOK DOO</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
         <header>
@@ -16,31 +16,41 @@
             </div>
             <nav>
                 <ul>
-                    <button id="ulButton"><span>X</span></button>
+                    <button id="ulButton" onClick={handleButtonClick}>
+                        <span>X</span>
+                    </button>
+    
                     <li id="profileAndSns">
                         <h4>Profile & SNS</h4>
                         <ul class="subMenu">
-                            <li><a href="#" id="curriculumVitae">Curriculum Vitae</a></li>
-                            <li><a href="#" id="linkedIn">LinkedIn</a></li>
+                            <li><a href="file/Resume.pdf">Curriculum Vitae</a></li>
+                            <li><a href="https://www.linkedin.com/in/minseok-doo/">LinkedIn</a></li>
                         </ul>
                     </li>
                     <li id="blog">
                         <h4>Blog</h4>
                         <ul class="subMenu">
-                            <li><a href="#" id="enBlog">EN Blog</a></li>
-                            <li><a href="#" id="krBlog">KR Blog</a></li>
+                            <li><a href="https://blog.mdoo.info">EN Blog</a></li>
+                            <li><a href="https://blog.mdoo.pe.kr">KR Blog</a></li>
                         </ul>
                     </li>
                     <li id="portfolios">
                         <h4>Portfolios</h4>
                         <ul class="subMenu">
-                            <li><a href="#" id="artStation">ArtStation</a></li>
-                            <li><a href="#" id="gitHub">GitHub</a></li>
-                            <li><a href="#" id="itchIo">Itch.io</a></li>
+                            <li><a href="https://mdoo_pri.artstation.com">ArtStation</a></li>
+                            <li><a href="https://github.com/tkakrdpahd">GitHub</a></li>
+                            <li><a href="https://mdoo12.itch.io">Itch.io</a></li>
+                        </ul>
+                    </li>
+                    <li id="shop">
+                        <h4>Shop</h4>
+                        <ul class="subMenu">
+                            <li><a href="https://kmong.com/@%EC%82%AC%EB%AA%BD%54%41" target="_blank" rel="noreferrer noopener">Kmong</a></li>
+                            <li><a href="https://www.paypal.com/ncp/payment/CQF7NLNYYKTKE" target="_blank" rel="noreferrer noopener">PayPal</a></li>
                         </ul>
                     </li>
                 </ul>
-            </nav>           
+            </nav>         
         </header>
         <article class="article_01">
             <h2>Welcome to my webpage | 제 홈페이지에 오신것을 환영합니다</h2>
