@@ -14,7 +14,7 @@ function setCssForMobile() {
                 const button = document.getElementById('ulButton');
                 if (button) {
                     button.style.display = 'block';
-                    button.onclick = () => {  // Add a click event listener to the button
+                    button.onclick = () => {
                         listItems.forEach(ul => {
                             ul.style.display = 'none';
                         });
