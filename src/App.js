@@ -1,16 +1,42 @@
-import Header from './components/Header/Header';
-import Articles from './components/Articles/Articles';
-import ArtWork from './components/ArtWork/ArtWork';
+import React from 'react';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import './App.css';
 
-function App() {
-  return (
-    <div>
-      <Header/>
-      <Articles/>
-      <ArtWork/>
-    </div>
-  );
+// This is components
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+
+// This is pages
+import Main from './pages/Main/Main';
+import Shop from './pages/Shop/Shop';
+
+function Layout() {
+    return (
+        <div>
+            <Header />
+            <Outlet />
+            <Footer />
+        </div>
+    );
 }
 
-export default App;
+const routes = [
+    {
+        path: '/',
+        element: <Layout />,
+        children: [
+            { path: '/', element: <Main /> },
+            { path: '/about', element: <Shop /> },
+        ],
+    },
+];
+
+const router = createBrowserRouter(routes);
+
+export default function App({ products }) {
+    return (
+        <RouterProvider router={router} />
+    );
+}
+
+// export default App;
