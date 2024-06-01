@@ -1,1 +1,1 @@
-.Main{margin-top:15vh;height:80vh;width:100vw;display:grid;align-items:center;justify-content:center}
+@import"https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap";@media screen and (min-width: 1080px){.Main{margin-top:15vh;height:80vh;width:100vw;display:grid;align-items:center;justify-content:center}}@media screen and (max-width: 1079px){.Main{margin-top:5vh;height:90vh;width:100vw;display:grid;align-items:center;justify-content:center}}

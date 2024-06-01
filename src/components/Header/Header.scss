@@ -1,14 +1,30 @@
 @import '../../styles/_variable.scss';
 @import '../../styles/mixins';
 
-header{
-    @include marginPaddingSetting(0%, .5vw);
-    position: absolute;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    div{
+@media screen and (min-width: 1080px) {
+    header{
+        @include marginPaddingSetting(0%, .5vw);
+        position: absolute;
+        width: 100vw;
         display: flex;
-        align-items: center;       
-    } 
+        justify-content: space-between;
+        div{
+            display: flex;
+            align-items: center;       
+        } 
+    }
+}
+
+@media screen and (max-width: 1079px) {
+    header{
+        @include marginPaddingSetting(0%, .5vw);
+        position: absolute;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        div{
+            display: flex;
+            align-items: center;       
+        } 
+    }
 }

@@ -1,11 +1,20 @@
 //test
+@import '../../styles/_variable.scss';
+@import '../../styles/mixins';
 
-.SNS {
-    position: absolute;
-    bottom: 2.5vh;
-    right: 2.5vw;
-    blockquote{
-        width: 10vw;
-        height: auto;
+@media screen and (min-width: 1080px) {
+    .SNS {
+        position: absolute;
+        bottom: 2.5vh;
+        right: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 1079px) {
+    .SNS {
+        display: none;
+        position: absolute;
+        bottom: .5vh;
+        right: 2.5vw;
     }
 }

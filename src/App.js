@@ -38,5 +38,3 @@ export default function App({ products }) {
         <RouterProvider router={router} />
     );
 }
-
-// export default App;
