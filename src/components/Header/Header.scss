@@ -1,12 +1,12 @@
 @import '../../styles/_variable.scss';
+@import '../../styles/mixins';
 
 header{
     @include marginPaddingSetting(0%, .5vw);
+    position: absolute;
+    width: 100vw;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
-    border-bottom: solid 0.125vw $primary-color;
     a{
         color: $primary-color;
         text-decoration: none;

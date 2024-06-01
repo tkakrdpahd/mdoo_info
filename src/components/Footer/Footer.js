@@ -1,11 +1,9 @@
 import './Footer.css';
 
-function Footer() {
+export default function Footer() {
     return (
         <footer>
             <p>© Minseok Doo. All rights reserved. 2024</p>
         </footer>
     );
 }
-
-export default Footer;
