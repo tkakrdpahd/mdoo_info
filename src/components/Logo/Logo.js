@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import './Logo.css'
 
 function Logo() {
   return (
-    <h1>Minseok Doo</h1>
+    <Link to='/'><h1>Minseok Doo</h1></Link>
   );
 }
 

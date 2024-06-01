@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 
 // This is pages
 import Main from './pages/Main/Main';
+import SNSPage from './pages/SNS/SNS';
 import Shop from './pages/Shop/Shop';
 
 function Layout() {
@@ -26,6 +27,7 @@ const routes = [
         element: <Layout />,
         children: [
             { path: '/', element: <Main /> },
+            { path: '/SNS', element: <SNSPage /> },
             { path: '/about', element: <Shop /> },
         ],
     },

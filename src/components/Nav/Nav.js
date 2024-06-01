@@ -1,5 +1,6 @@
-import './Nav.css';
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Nav.css';
 
 function setCssForMobile() {
     const h4Elements = document.querySelectorAll('nav li h4');
@@ -47,7 +48,7 @@ function Nav() {
                     <h4>Profile & SNS</h4>
                     <ul className="subMenu">
                         <li><a href="file/Resume.pdf">Curriculum Vitae</a></li>
-                        <li><a href="https://www.linkedin.com/in/minseok-doo/">LinkedIn</a></li>
+                        <li><Link to='/SNS'>SNS</Link></li>
                     </ul>
                 </li>
                 <li id="blog">
