@@ -3,25 +3,25 @@
 
 @media screen and (min-width: 1080px) {
     nav{
-        display: flex;
-        padding: 1vw;
-        ul{
+        width: 30vw;
+        margin-top: 1.5vh;
+        padding-right: 2.5vw;
+        #ulButton {
+            display: none;
+        }
+        ul {
             display: flex;
             list-style: none;
-            button {
-                display: none;
-            }
-            ul li {
-                padding-right: 2vw;
-                padding-bottom: .5vh;
-                @include fontSetting(300);
-                &:last-child {
-                    padding-right: 0;
-                    padding-bottom: 0;
+            justify-content: space-between;
+            li {
+                h4 {
+                    @include fontSetting(400,1.25rem);
                 }
-            }
-            &:last-child {
-                padding-right: .5vw;
+                a{
+                    @include fontSetting(300,1.125rem);
+                    color: $primary-color;
+                    text-decoration: none;
+                }
             }
         }
         .subMenu {
@@ -36,9 +36,9 @@
         li:hover .subMenu {
             visibility: visible;
             opacity: 1;
-            padding-top: 1vw;
+            padding-top: 0.5vw;
             max-height: 10vw;
-        }                
+        }
     }
 }
 
@@ -67,7 +67,7 @@
             }
             li{
                 h4 {
-                    @include fontSetting(400, 1.5rem, );
+                    @include fontSetting(400, 1.25rem, );
                     padding-right: 3.5vw;
                 }
                 ul {

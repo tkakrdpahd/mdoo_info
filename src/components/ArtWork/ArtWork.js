@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import "./ArtWork.css";
 
 export default function ArtWork() {

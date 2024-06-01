@@ -1,6 +1,15 @@
-@import '../../styles/_variable.scss';
+@import '../../styles/variable.scss';
+@import '../../styles/mixins';
 
-h1{
-    @include marginPaddingSetting(.5vw, );
-    padding-left: 1vw;
+@media screen and (min-width: 1080px) {
+    h1{
+        padding-left: 1vw;
+    }
+}
+
+@media screen and (max-width: 1079px) {
+    h1{
+        font-size: 1.5rem;
+        padding-left: 1vw;
+    }
 }

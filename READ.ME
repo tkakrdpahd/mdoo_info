@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # PDF 파일 등 특정 파일 유형에 대한 요청을 예외로 처리
+  RewriteCond %{REQUEST_URI} !\.(pdf|jpg|png|css|js)$ [NC]
+
+  # 모든 다른 요청을 index.html로 리디렉션
+  RewriteRule ^ index.html [L]
+</IfModule>
