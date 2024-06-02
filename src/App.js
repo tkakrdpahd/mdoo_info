@@ -28,7 +28,7 @@ const routes = [
         children: [
             { path: '/', element: <Main /> },
             { path: '/SNS', element: <SNSPage /> },
-            { path: '/about', element: <Shop /> },
+            { path: '/shop', element: <Shop /> },
         ],
     },
 ];

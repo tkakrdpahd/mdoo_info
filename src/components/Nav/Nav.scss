@@ -3,7 +3,7 @@
 
 @media screen and (min-width: 1080px) {
     nav{
-        width: 30vw;
+        width: 25vw;
         margin-top: 1vh;
         padding-right: 2.5vw;
         #ulButton {
@@ -20,7 +20,7 @@
                 ul li {
                     padding-bottom: .25vh;
                 }
-                a{
+                li a{
                     @include fontSetting(300,1rem);
                     color: $primary-color;
                     text-decoration: none;
