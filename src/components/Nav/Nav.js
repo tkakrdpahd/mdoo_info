@@ -55,16 +55,16 @@ function Nav() {
                 <li id="blog">
                     <h4>Blog</h4>
                     <ul className="subMenu">
-                        <li><a href="https://blog.mdoo.info">EN Blog</a></li>
-                        <li><a href="https://blog.mdoo.pe.kr">KR Blog</a></li>
+                        <li><a href="https://blog.mdoo.info" target="_blank" rel="noreferrer noopener">EN Blog</a></li>
+                        <li><a href="https://blog.mdoo.pe.kr" target="_blank" rel="noreferrer noopener">KR Blog</a></li>
                     </ul>
                 </li>
                 <li id="portfolios">
                     <h4>Portfolios</h4>
                     <ul className="subMenu">
-                        <li><a href="https://mdoo_pri.artstation.com">ArtStation</a></li>
-                        <li><a href="https://github.com/tkakrdpahd">GitHub</a></li>
-                        <li><a href="https://mdoo12.itch.io">Itch.io</a></li>
+                        <li><a href="https://mdoo_pri.artstation.com" target="_blank" rel="noreferrer noopener">ArtStation</a></li>
+                        <li><a href="https://github.com/tkakrdpahd" target="_blank" rel="noreferrer noopener">GitHub</a></li>
+                        <li><a href="https://mdoo12.itch.io" target="_blank" rel="noreferrer noopener">Itch.io</a></li>
                     </ul>
                 </li>
                 <li id="shop">
