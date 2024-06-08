@@ -15,13 +15,13 @@
             justify-content: space-between;
             li {
                 h4 {
-                    @include fontSetting(400,1.125rem);
+                    @include fontSetting(400,1.25rem);
                 }
                 ul li {
                     padding-bottom: .25vh;
                 }
                 li a{
-                    @include fontSetting(300,1rem);
+                    @include fontSetting(300,1.125rem);
                     color: $primary-color;
                     text-decoration: none;
                 }
@@ -70,7 +70,7 @@
             }
             li{
                 h4 {
-                    @include fontSetting(400, 1.25rem, );
+                    @include fontSetting(400, 0.95rem, );
                     padding-right: 3.5vw;
                 }
                 ul {

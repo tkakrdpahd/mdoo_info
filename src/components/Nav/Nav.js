@@ -22,6 +22,19 @@ function setCssForMobile() {
                         button.style.display = 'none';
                     };
                 }
+
+                // Add event listener to nested li elements
+                const nestedLiElements = h4.parentElement.querySelectorAll('ul li ul li');
+                nestedLiElements.forEach(li => {
+                    li.addEventListener('click', () => {
+                        listItems.forEach(ul => {
+                            ul.style.display = 'none';
+                        });
+                        if (button) {
+                            button.style.display = 'none';
+                        }
+                    });
+                });
             }
         });
     });

@@ -20,11 +20,15 @@
         @include marginPaddingSetting(0%, .5vw);
         position: absolute;
         width: 100vw;
-        display: flex;
-        justify-content: space-between;
+        display: block;
+        text-align: center;
+        nav{
+            padding-left: 18.125vw;
+        }
         div{
             display: flex;
+            margin: auto;
             align-items: center;       
-        } 
+        }
     }
 }
