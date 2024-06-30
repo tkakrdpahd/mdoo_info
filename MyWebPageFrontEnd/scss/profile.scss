@@ -1,0 +1,147 @@
+// This is profile page setting
+@mixin reset{
+    margin: 0;
+    padding: 0;
+}
+@mixin titleSetting{
+    margin-bottom: 1vw;
+    padding-bottom: 0.25vw;
+    border-bottom: #fff 0.1vw solid;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+@mixin subtitleSetting{
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-top: 1.25vw;
+    padding-bottom: 0.25;
+}
+@mixin boxSetting{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 1vw;
+}
+// this is article setting
+.mainContents{
+    @include reset;
+    margin: auto;
+    padding-top: 4vw;
+
+    width: 50vw;
+
+    text-align: center;
+
+    .personalInfo {
+        @include reset();
+        margin-bottom: 2vw;
+
+        display: flex;
+        flex-direction: column;
+
+        .name {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .curriculum_vitae {
+            font-size: 1.25rem;
+            font-weight: 300;
+
+            padding-bottom: 1vw;
+        }
+
+        .contactInfo, .portfolio {
+            font-size: 0.85rem;
+            font-weight: 300;
+        }
+    }
+    div.Summary{
+        @include boxSetting();
+        text-align: left;
+        span.Summary{
+            @include titleSetting();
+            text-align: center;
+        }
+    }
+    div.Education {
+        @include boxSetting();
+
+        span.Education{
+            @include titleSetting();
+        }
+        .school{
+            padding-top: 1vw;
+            font-weight: 500;
+        }
+        .schoolDate{
+            margin-bottom: 1vw;
+            font-weight: 300;
+        }
+        .schoolDegree{
+            font-weight: 300;
+        }
+    }
+    div.ConferenceandPublication {
+        @include boxSetting();
+        text-align: left;
+
+        span.ConferenceandPublication {
+            @include titleSetting();
+            text-align: center;
+        }
+        .ArtandSocialScience {
+            @include subtitleSetting();
+        }
+        .ScienceandEmergingScience {
+            @include subtitleSetting();
+        }
+        a{
+            text-decoration: underline;
+        }
+        .article {
+            padding: 1vw;
+            font-weight: 300;
+        }
+    }
+    div.Skills{
+        @include boxSetting();
+        text-align: left;
+        span.Skills{
+            @include titleSetting();
+            text-align: center;
+        }
+        .title{
+            @include subtitleSetting();
+        }
+        .skillSet{
+            padding: 1vw;
+        }
+    }
+    div.Experience{
+        @include boxSetting();
+        text-align: left;
+        span.Experience{
+            @include titleSetting();
+            text-align: center;
+        }
+        .SoloProjects{
+            @include subtitleSetting();
+        }
+        .TeamProject{
+            @include subtitleSetting();
+        }
+        a{
+            text-decoration: underline;
+        }
+        .title {
+            padding: 1vw;
+            font-weight: 500;
+        }
+        .article {
+            padding-left: 1vw;
+            font-weight: 300;
+        }
+    }
+}

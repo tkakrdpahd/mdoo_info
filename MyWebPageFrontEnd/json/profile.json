@@ -1,0 +1,182 @@
+{
+  "ko":[
+    {
+      "personalInfo": {
+        "name": "두민석",
+        "curriculum_vitae": "마스터 이력서",
+        "portfolio": "mdoo_pri.artstation.com | github.com/tkakrdpahd | mdoo12.itch.io"
+      },
+      "Summary": {
+        "Summary": "요약",
+        "article": "저는 디지털 미디어 이론, 현대 미디어 기술, 네트워크 엔지니어링과 같은 분야에서 활동하고 있는 아티스트, 디자이너, 게임 디자이너, 풀스택 개발자, 사운드 엔지니어, 그리고 인터랙티브 분야에서 연구를 진행하는 학자입니다."
+      },
+      "Education": {
+        "Education": "학력",
+        "school01": "메릴랜드 예술대학(MICA)",
+        "schoolDegree01": "인터랙티브 아트 학사, 게임 아트 부전공",
+        "schoolDate01": "2023년 8월 - 2025년 12월",
+        "school02": "링링 예술대학(RCAD)",
+        "schoolDegree02": "게임 아트 / VR 개발 중퇴",
+        "schoolDate02": "2021년 8월 - 2023년 5월",
+        "school03": "고려대학교(KU)",
+        "schoolDegree03": "국제 여름 캠퍼스 (ISC)",
+        "schoolDate03": "2022년 6월 - 7월"
+      },
+      "ConferenceandPublication": {
+        "ConferenceandPublication": "학술대회 및 출판",
+        "ArtandSocialScience":"예술 / 사회과학",
+        "article01": "두민석. (2024; 접수대기 중). 엔터테인먼트의 미래: 플레이의 시리즈에서 상호작용과 몰입. The 9th World Conference on Media and Mass Communication.",
+        "article02": "두민석. (심사 점수 대기 중). 버튜버 혁명: 현대 미디어에서의 기원, 분기점 및 융합. 융합. Convergence. ?(?) pp ?? - ??. CON-24-0021",
+        "article03": "두민석. (2024). 버튜버 혁명: 현대 미디어에서의 기원, 분기점 및 융합. 융합. In Proceedings of the Global Conference on Media, Communication, and Film (MCFCONF), 1(1), Article 1.",
+        "article04": "M. Doo (With Editor). (2023). Unearthing the Essence of Video Games: An Analysis of Literary and Artistic Discourses. Semiotica, ?(?), pp. ??-??. SEMI.2023.0187",
+        "article05": "M. Doo. (2023). 게임 디자인의 전술: 플레이-가능성과 게임성. 2023년 한국 게임 학회 봄 컨퍼런스, pp. 3-10.",
+        "ScienceandEmergingScience": "Science / Emerging Science",
+        "article06": "M. Doo. (2024; Pending). Critical review on decentralization of gaming servers with P2P service. In Proceedings of the 2024 IEEE Gaming, Entertainment, and Media Conference (GEM), 33, Article 1570994560.",
+        "article07": "두민석. 최한준. 나찬빈. (2024; 대기 중). DNS 시딩 및 그래프 기반 노드 찾기 기술을 기반으로 한 P2P 라이브 스트리밍 모듈 연구. 2024년 IEEE 기술 및 엔지니어링 관리 학회 혁신 기술 동향 컨퍼런스에서 발표. Article 10."
+      }
+    },
+    {
+      "Experience": {
+        "Experience": "이력사항",
+        "SoloProjects": "개인프로젝트",
+        "title01": "2024(접수대기중): 엔터테인먼트의 미래, 2024년 제 9회 미디어와 대량 상호작용 국제 컨퍼런스.",
+        "article01": "Media trends stress rethinking digital interaction's role, now vital for entertainment, focusing on performative and interactive engagement.",
+        "title02": "2024: Remix as Acapella MICA: IA 390",
+        "article02":"",
+        "title03": "2024: 개인 홈페이지 개발<a href='https://github.com/tkakrdpahd/MyWebPageFrontEnd' style='color: DarkMagenta;'>GitHub Repo</a>",
+        "article03": "풀스택 개발 프로젝트로 SPA 형태를 채택하여 진행하였음.",
+        "title04": "2024: Get Into GRBWB MICA: GMD<a href='https://mdoo12.itch.io/get-into-grbwb' style='color: yellow;'>Itch.io Repo</a>",
+        "article04": "A 2D Unity game where players navigate colored areas within time limits. It includes 'start', 'level', and 'end' scenes, space bar navigation, and uses RigidBody2D and Polygon Collider 2D for movement.",
+        "title05": "2024: Libramentum Full-stack Website Development<a href='https://github.com/tkakrdpahd/libramentumFrontEnd' style='color: DarkMagenta;'>GitHub Repo</a>",
+        "article05": "The website was built with HTML, SCSS, and JavaScript without frameworks. It's hosted on AWS EC2, using an Apache server on RedHat 9 Linux. The firewall is managed by Firewalld, and HTTPS is secured through ZeroSSL.",
+        "title06": "2024: Let's start DJ MICA: IA 390",
+        "article06": "Live DJing performance with Traktor Pro 3. MIDI controller was utilized.",
+        "title07": "2024: The V-Tuber Wave Convergence: The International Journal of Research into New Media Technologies <a href='https://proudpen.com/proceedings/index.php/mcfconf/article/view/156' style='color: Tan;'>Institution Page</a>",
+        "article07": "The analysis reviews V-Tubing's evolution and future in key nations, focusing on major platforms like Japan's Hololive, South Korea's ISEGYE IDOL, and the USA's Shylily.",
+        "title08": "2023: Web Tetris MICA: IA221 <a href='https://editor.p5js.org/mdoo/sketches/exRInUThJ' style='color: DeepPink;'>P5.JS Editor</a>",
+        "article08": "Developed a Tetris game with efficient block management and movement using a double for loop for the board, and dynamic falling block movement based on shape and index, improving data handling and movement accuracy.",
+        "title09": "2023: Tactic of game design Korea Game Society 2023 Spring Conference (pp. 3-10) <a href='https://kcgs.or.kr/발표논문안내/11831409' style='color: Tan;'>Institution Page</a>",
+        "article09": "The study explores game concepts through history and philosophy, merging Heidegger's art philosophy with Juul's game model to understand games' interactive nature.",
+        "title10": "2023: Where is your home? MICA: FF",
+        "title11": "2023: Material of Color Design MICA: FF",
+        "title12": "2023: Spooky Game: shoot the pumpkin RCAD: VRD",
+        "article12": "Solly created an Oculus 2 FPS game in UE4 where players shoot pumpkin head balloons spawning every 3 seconds with a pistol. Balloon speed varies by level and missing them costs a chance. The game uses three Blueprint Actors: gun, balloons, and map.",
+        "title13": "2023: Find the Flower RCAD: VRD",
+        "title14": "2022: Car Modeling RCAD: GA<a href='https://www.artstation.com/artwork/8wK49E' style='color: SkyBlue;'>ArtStation</a>",
+        "title15": "2022: Escape the server room RCAD: GA",
+        "title16": "2022: The Day It Collapsed: Design",
+        "title17": "2022: The Day It Collapsed: illustration",
+        "title18": "2022: Project 5 - rhythm RCAD: MEDA",
+        "title19": "2022: The Cat",
+        "title20": "2022: Hallway Design RCAD: GA<a href='https://www.artstation.com/artwork/49Gqe1' style='color: SkyBlue;'>ArtStation</a>",
+        "title21": "UE 4 Lighting Project<a href='https://www.artstation.com/artwork/OmN2lb' style='color: SkyBlue;'>ArtStation</a>",
+        "title22": "2022: Make My Hand RCAD: GA<a href='https://www.artstation.com/artwork/4XVwO1' style='color: SkyBlue;'>ArtStation</a>",
+        "article22": "PBR hand modeling with ZBrush. Z Layer, Z Sphere, Maya 2023 was utilized.",
+        "title23": "2022: Isometric City RCAD: GA<a href='https://www.artstation.com/artwork/kQJoOn' style='color: SkyBlue;'>ArtStation</a>",
+        "article23": "First Maya modeling project with isometric pixel concept art.",
+        "TeamProject": "Team Project",
+        "title24": "2024: The P2P Live-Streaming Module Design IEEE TEMSCON 2024: Disruptive Technologies Trends. Article 10",
+        "article24": "The paper examines how P2P and blockchain technologies affect the streaming sector, citing Twitch Korea's shutdown over higher fees. It presents a P2P streaming solution promoting Net Neutrality, using DNS seeding and innovative methods to build a strong system with key components like 'Regional Pool' and 'Witness Node "
+      }
+    }
+  ],
+  "en":[
+    {
+      "personalInfo": {
+        "name": "Minseok Doo",
+        "curriculum_vitae": "Master Resume",
+        "portfolio": "mdoo_pri.artstation.com | github.com/tkakrdpahd | mdoo12.itch.io"
+      },
+      "Summary": {
+        "Summary": "Summary",
+        "article": "I am an artist, designer, game designer, full-stack developer, sound engineer, and a scholar conducting research in interactive fields. I am active in areas such as digital media theory, contemporary media technology, and network engineering."
+      },
+      "Education": {
+        "Education": "Education",
+        "school01": "Maryland Institute College of Art (MICA)",
+        "schoolDegree01": "BFA in Interactive Art, minor in game art",
+        "schoolDate01": "August 2023 - December 2025",
+        "school02": "Ringling College of Art and Design (RCAD)",
+        "schoolDegree02": "Withdraw Game Art / VR development",
+        "schoolDate02": "August 2021 - May 2023",
+        "school03": "Korea University (KU)",
+        "schoolDegree03": "International Summer Campus",
+        "schoolDate03": "Jun - July 2022"
+      },
+      "ConferenceandPublication": {
+        "ConferenceandPublication": "Conference and Publication",
+        "ArtandSocialScience":"Art / Social Science",
+        "article01": "M. Doo. (2024; Pending). Future of Entertainment: Interaction and Immersive the Series of Play. Presented at The 9th World Conference on Media and Mass Communication.",
+        "article02": "M. Doo (Awaiting Reviewer Scores). The V-Tuber Wave: Origins, Divergence, and Convergence in Contemporary Media. Convergence. ?(?) pp ?? - ??. CON-24-0021",
+        "article03": "<a href='https://proudpen.com/proceedings/index.php/mcfconf/article/view/156'> M. Doo. (2024). V-Tuber wave: Origins, divergence, and convergence in contemporary media. In Proceedings of the Global Conference on Media, Communication, and Film (MCFCONF), 1(1), Article 1.</a>",
+        "article04": "M. Doo (With Editor). (2023). Unearthing the Essence of Video Games: An Analysis of Literary and Artistic Discourses. Semiotica, ?(?), pp. ??-??. SEMI.2023.0187",
+        "article05": "<a href='https://kcgs.or.kr/발표논문안내/11831409'>M. Doo. (2023). Tactic of game design: The playability and gameness. In Proceedings of the Korea Game Society 2023 Spring Conference, pp. 3-10.</a>",
+        "ScienceandEmergingScience": "Science / Emerging Science",
+        "article08": "M. Doo. (2024; Currently Working On). Theory of 3D/2D Vector and Mash Design: with Live2D Cubism and Blender",
+        "article06": "M. Doo. (2024; Pending). Critical review on decentralization of gaming servers with P2P service. In Proceedings of the 2024 IEEE Gaming, Entertainment, and Media Conference (GEM), 33, Article 1570994560.",
+        "article07": "M. Doo. J. Choi. and C. Na. (2024; Pending). The P2P Live-Streaming Module Study: Based on the DNS seeding, and Graph-Based Node Finding technology. In the 2024 IEEE Technology and Engineering Management Society Conference on Disruptive Technologies Trends. Article 10."
+      },
+      "Skills": {
+        "Skills": "Skills",
+        "title01":"Fine Art, Design & Visualization",
+        "skillSet01": " - Fine Art: Oil Painting, Acrylic Painting, Gouache Painting, Drawing, Stone Sculpting",
+        "skillSet02": " - 2D & Image Editing: Adobe Photoshop (CS3 - CC), Procreate, Adobe InDesign, Adobe Dreamweaver, Adobe XD, Figma, Clip Studio",
+        "skillSet03": " - 3D Modeling & Animation: Maya, Blender, ZBrush (2021 - 2023), Substance Painter, Houdini",
+        "skillSet04": " - Video Editing & Streaming: Adobe Premier Pro, OBS Studio, DaVinci Resolve",
+        "title02": "Programming Languages & Technologies",
+        "skillSet05": "- Languages: C, C++, C#, Python, Java, JavaScript",
+        "skillSet06": " - Web Development & Frameworks: HTML5, SCSS(CSS3), Node.js, Socket.io, P5.JS",
+        "skillSet07": " - Databases: MariaDB, MySQL",
+        "skillSet08": "- Operating Systems: Windows, Mac OS, RedHat 9, Rocky Linux 9, Cent OS 7, Ubuntu, Debian, Kali Linux",
+        "skillSet09": " - Network Tools & Management: Nmap, Wireshark, TCP/IP engineering, FTP, ILS",
+        "skillSet10": "- Game Engines: Unreal Engine 4, Unity (22.3.17f1)",
+        "title03": "Audio Production",
+        "skillSet11": " - Software: Ableton Live 11, Logic Pro, Adobe Audition, Audacity, Traker Pro 3, Touch Designer"
+      },
+      "Experience": {
+        "Experience": "Experience ",
+        "SoloProjects": "Solo Projects",
+        "title25": "2024: Theory of 3D/2D Vector and Mash Design: from Birth to Modern Times",
+        "article25":"This research delves into 3D modeling in animation and gaming, examining common methods, challenges, and improvements, and explores the integration of technologies like C++ vector library and OpenGL in producing UV maps and 3D objects, excluding NURBS modeling.",
+        "title01": "2024: Future of Entertainment The 9th World Conference on Media and Mass Communication 2024.",
+        "article01": "Media trends stress rethinking digital interaction's role, now vital for entertainment, focusing on performative and interactive engagement.",
+        "title02": "2024: Remix as Acapella MICA: IA 390",
+        "article02":"",
+        "title03": "2024: My Web Page Full-stack Website Development <a href='https://github.com/tkakrdpahd/MyWebPageFrontEnd' style='color: DarkMagenta;'>GitHub Repo</a>",
+        "article03": "Full web-page development.",
+        "title04": "2024: Get Into GRBWB MICA: GMD <a href='https://mdoo12.itch.io/get-into-grbwb' style='color: yellow;'>Itch.io Repo</a>",
+        "article04": "A 2D Unity game where players navigate colored areas within time limits. It includes 'start', 'level', and 'end' scenes, space bar navigation, and uses RigidBody2D and Polygon Collider 2D for movement.",
+        "title05": "2024: Libramentum Full-stack Website Development<a href='https://github.com/tkakrdpahd/libramentumFrontEnd' style='color: DarkMagenta;'>GitHub Repo</a>",
+        "article05": "The website was built with HTML, SCSS, and JavaScript without frameworks. It's hosted on AWS EC2, using an Apache server on RedHat 9 Linux. The firewall is managed by Firewalld, and HTTPS is secured through ZeroSSL.",
+        "title06": "2024: Let's start DJ MICA: IA 390",
+        "article06": "Live DJing performance with Traktor Pro 3. MIDI controller was utilized.",
+        "title07": "2024: The V-Tuber Wave (Conference Call) <a href='https://proudpen.com/proceedings/index.php/mcfconf/article/view/156' style='color: Tan;'>Institution Page</a>",
+        "article07": "The analysis reviews V-Tubing's evolution and future in key nations, focusing on major platforms like Japan's Hololive, South Korea's ISEGYE IDOL, and the USA's Shylily.",
+        "title08": "2023: Web Tetris MICA: IA221 <a href='https://editor.p5js.org/mdoo/sketches/exRInUThJ' style='color: DeepPink;'>P5.JS Editor</a>",
+        "article08": "Developed a Tetris game with efficient block management and movement using a double for loop for the board, and dynamic falling block movement based on shape and index, improving data handling and movement accuracy.",
+        "title09": "2023: Tactic of game design Korea Game Society 2023 Spring Conference (pp. 3-10) <a href='https://kcgs.or.kr/발표논문안내/11831409' style='color: Tan;'>Institution Page</a>",
+        "article09": "The study explores game concepts through history and philosophy, merging Heidegger's art philosophy with Juul's game model to understand games' interactive nature.",
+        "title10": "2023: Where is your home? MICA: FF",
+        "title11": "2023: Material of Color Design MICA: FF",
+        "title12": "2023: Spooky Game: shoot the pumpkin RCAD: VRD",
+        "article12": "Solly created an Oculus 2 FPS game in UE4 where players shoot pumpkin head balloons spawning every 3 seconds with a pistol. Balloon speed varies by level and missing them costs a chance. The game uses three Blueprint Actors: gun, balloons, and map.",
+        "title13": "2023: Find the Flower RCAD: VRD",
+        "title14": "2022: Car Modeling RCAD: GA <a href='https://www.artstation.com/artwork/8wK49E' style='color: SkyBlue;'>ArtStation</a>",
+        "title15": "2022: Escape the server room RCAD: GA",
+        "title16": "2022: The Day It Collapsed: Design",
+        "title17": "2022: The Day It Collapsed: illustration",
+        "title18": "2022: Project 5 - rhythm RCAD: MEDA",
+        "title19": "2022: The Cat",
+        "title20": "2022: Hallway Design RCAD: GA <a href='https://www.artstation.com/artwork/49Gqe1' style='color: SkyBlue;'>ArtStation</a>",
+        "title21": "UE 4 Lighting Project<a href='https://www.artstation.com/artwork/OmN2lb' style='color: SkyBlue;'>ArtStation</a>",
+        "title22": "2022: Make My Hand RCAD: GA <a href='https://www.artstation.com/artwork/4XVwO1' style='color: SkyBlue;'>ArtStation</a>",
+        "article22": "PBR hand modeling with ZBrush. Z Layer, Z Sphere, Maya 2023 was utilized.",
+        "title23": "2022: Isometric City RCAD: GA <a href='https://www.artstation.com/artwork/kQJoOn' style='color: SkyBlue;'>ArtStation</a>",
+        "article23": "First Maya modeling project with isometric pixel concept art.",
+        "TeamProject": "Team Project",
+        "title24": "2024: The P2P Live-Streaming Module Design IEEE TEMSCON 2024: Disruptive Technologies Trends. Article 10",
+        "article24": "The paper examines how P2P and blockchain technologies affect the streaming sector, citing Twitch Korea's shutdown over higher fees. It presents a P2P streaming solution promoting Net Neutrality, using DNS seeding and innovative methods to build a strong system with key components like 'Regional Pool' and 'Witness Node "
+      }
+    }
+  ]
+}
